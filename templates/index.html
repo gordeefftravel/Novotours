@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Novo Tours — туры и экскурсии из Санкт-Петербурга</title>
+<meta name="description" content="Novo Tours: зарубежные туры, экскурсии по России и индивидуальные программы. Новоселье, ул. Невская, 15к1.">
+<link rel="icon" href="{{ url_for('static', filename='img/logo-icon.png') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><img src="{{ url_for('static', filename='img/logo-icon.png') }}" alt="" width="44" height="44">novo<b>.</b><span class="t">tours</span></a>
+  <a class="tel" href="tel:{{ company.phone }}" aria-label="Позвонить"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <h1>Найдите путешествие своей мечты</h1>
+  <p>Зарубежные туры, экскурсии по России и индивидуальные программы</p>
+</div></section>
+
+<main class="wrap">
+  <div class="search">
+    <div><label>Куда</label><input id="q" placeholder="Страна или город"></div>
+    <div><label>Тип</label><select id="t"><option value="">Любой</option><option value="abroad">Зарубежные туры</option><option value="russia">Экскурсии по России</option><option value="custom">Индивидуальные</option></select></div>
+    <button class="btn" id="go">Найти туры</button>
+  </div>
+
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-f="">Все</button>
+    <button class="tab" data-f="abroad">Зарубежные туры</button>
+    <button class="tab" data-f="russia">По России</button>
+    <button class="tab" data-f="custom">Индивидуальные</button>
+  </div>
+
+  <h2>Актуальные туры</h2>
+  <div class="grid" id="grid">
+  {% for t in tours %}
+    <article class="card" data-type="{{ t.type }}" data-text="{{ (t.title ~ ' ' ~ t.when ~ ' ' ~ t.desc)|lower }}">
+      <div class="pic">
+        {% if t.badge %}<span class="badge">{{ t.badge }}</span>{% endif %}
+        <img src="{{ url_for('static', filename='img/' ~ t.img) }}" alt="{{ t.title }}" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>{{ t.title }}</h3>
+        <div class="meta">{{ t.when }}</div>
+        <div class="desc">{{ t.desc }}</div>
+        <div class="foot">
+          <div class="price"><small>{{ t.unit }}</small><b>{{ t.price }}</b></div>
+          <button class="btn" data-tour="{{ t.title }}">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+  </div>
+  <p id="empty" class="meta" hidden>Ничего не найдено — оставьте заявку, подберём индивидуально.</p>
+
+  <div class="perks">
+  {% for icon, title, text in perks %}
+    <div class="perk"><span>{{ icon }}</span><h3>{{ title }}</h3><p>{{ text }}</p></div>
+  {% endfor %}
+  </div>
+
+  <div class="cta">
+    <div><h2>Не нашли подходящий тур?</h2><p>Расскажите, куда хотите, — подберём вариант за один день.</p></div>
+    <button class="btn" data-tour="">Оставить заявку</button>
+  </div>
+</main>
+
+<footer><div class="wrap">
+  <div>
+    <img src="{{ url_for('static', filename='img/logo-full.png') }}" alt="novo.tours" width="96" height="96" style="display:block;margin-bottom:8px">
+    <b>{{ company.name }}</b><br>{{ company.address }}<br>{{ company.hours }}<br>
+    <a href="{{ company.map }}" target="_blank" rel="noopener" style="color:var(--teal)">Показать на карте</a>
+  </div>
+  <div class="ct">
+    <a class="cb" href="tel:{{ company.phone }}" style="background:#0a9ba8"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Позвонить</a>
+    <a class="cb" href="{{ company.max }}" target="_blank" rel="noopener" style="background:#6a4bf0"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M12 2a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l5.3-1.3A9.5 9.5 0 1 0 12 2zm-3.5 12.5v-5l3.5 3.5 3.5-3.5v5h-1.6v-2l-1.9 1.9-1.9-1.9v2z"/></svg>Max</a>
+    <a class="cb" href="{{ company.telegram }}" target="_blank" rel="noopener" style="background:#229ed9"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M21.5 3.5 2.8 10.7c-1 .4-1 1.2-.2 1.4l4.7 1.5 1.8 5.6c.2.6.4.8.9.8s.6-.2.9-.5l2.2-2.2 4.600 3.400c.8.5 1.500.2 1.700-.8l3.100-14.600c.3-1.200-.5-1.800-1.500-1.400zM9 13.500l9.500-6c.4-.3.8-.1.5.2l-7.800 7-.3 3.200z"/></svg>Telegram</a>
+    <a class="cb" href="mailto:{{ company.email }}" style="background:#f47b20"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1zm9 7.500L4.500 7.500v1.200L12 13.700l7.500-5V7.500z"/></svg>Почта</a>
+  </div>
+  <div>© {{ now_year }} {{ company.name }}</div>
+</div></footer>
+
+<div id="md" class="md"><div class="mb">
+  <button class="mx" id="mx" aria-label="Закрыть">×</button>
+  <h3>Заявка на тур</h3><p class="mm">Оставьте контакты — менеджер свяжется с вами.</p>
+  <label>Тур</label><input id="fT" placeholder="Куда хотите поехать">
+  <label>Ваше имя *</label><input id="fN" autocomplete="name">
+  <label>Телефон *</label><input id="fP" type="tel" autocomplete="tel" placeholder="+7">
+  <label>Комментарий</label><input id="fC" placeholder="Даты, число туристов">
+  <input class="hp" id="fW" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <button class="btn" id="fS" style="width:100%;margin-top:14px">Отправить заявку</button>
+</div></div>
+<div id="toast"></div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
