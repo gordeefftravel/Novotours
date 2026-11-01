@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Novo Tours — туры и экскурсии из Санкт-Петербурга</title>
+<meta name="description" content="Novo Tours: зарубежные туры, экскурсии по России и индивидуальные программы. Новоселье, ул. Невская, 15к1.">
+<link rel="icon" href="static/img/logo-icon.png">
+<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><img src="static/img/logo-icon.png" alt="" width="44" height="44">novo<b>.</b><span class="t">tours</span></a>
+  <a class="tel" href="tel:+79818820888" aria-label="Позвонить"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <h1>Найдите путешествие своей мечты</h1>
+  <p>Зарубежные туры, экскурсии по России и индивидуальные программы</p>
+</div></section>
+
+<main class="wrap">
+  <div class="search">
+    <div><label>Куда</label><input id="q" placeholder="Страна или город"></div>
+    <div><label>Тип</label><select id="t"><option value="">Любой</option><option value="abroad">Зарубежные туры</option><option value="russia">Экскурсии по России</option><option value="custom">Индивидуальные</option></select></div>
+    <button class="btn" id="go">Найти туры</button>
+  </div>
+
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-f="">Все</button>
+    <button class="tab" data-f="abroad">Зарубежные туры</button>
+    <button class="tab" data-f="russia">По России</button>
+    <button class="tab" data-f="custom">Индивидуальные</button>
+  </div>
+
+  <h2>Актуальные туры</h2>
+  <div class="grid" id="grid">
+  
+    <article class="card" data-type="abroad" data-text="армения, ереван 19 ноября — 9 декабря 2026 · из санкт-петербурга, туда и обратно розовый город у подножия арарата: площадь республики с вечерней подсветкой, каскад, армянская кухня и коньяк. рядом храм гарни и монастырь гегард.">
+      <div class="pic">
+        <span class="badge">Новинка</span>
+        <img src="static/img/yerevan.jpg" alt="Армения, Ереван" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Армения, Ереван</h3>
+        <div class="meta">19 ноября — 9 декабря 2026 · из Санкт-Петербурга, туда и обратно</div>
+        <div class="desc">Розовый город у подножия Арарата: площадь Республики с вечерней подсветкой, Каскад, армянская кухня и коньяк. Рядом храм Гарни и монастырь Гегард.</div>
+        <div class="foot">
+          <div class="price"><small>туда + обратно</small><b>от 15 724 ₽</b></div>
+          <button class="btn" data-tour="Армения, Ереван">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card" data-type="abroad" data-text="стамбул 7–16 декабря 2026 · из санкт-петербурга, туда и обратно город на двух континентах: галатская башня, айя-софия, голубая мечеть, прогулка по босфору и шопинг на гранд-базаре.">
+      <div class="pic">
+        <span class="badge">Хит</span>
+        <img src="static/img/istanbul.jpg" alt="Стамбул" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Стамбул</h3>
+        <div class="meta">7–16 декабря 2026 · из Санкт-Петербурга, туда и обратно</div>
+        <div class="desc">Город на двух континентах: Галатская башня, Айя-София, Голубая мечеть, прогулка по Босфору и шопинг на Гранд-базаре.</div>
+        <div class="foot">
+          <div class="price"><small>туда + обратно</small><b>от 17 110 ₽</b></div>
+          <button class="btn" data-tour="Стамбул">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card" data-type="abroad" data-text="дубай — город будущего 2–11 ноября 2026 · из санкт-петербурга, туда и обратно бурдж-халифа, набережная дубай марина, поющие фонтаны и сафари по пустыне. тёплый ноябрь без жары.">
+      <div class="pic">
+        <span class="badge">Скоро вылет</span>
+        <img src="static/img/dubai.jpg" alt="Дубай — город будущего" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Дубай — город будущего</h3>
+        <div class="meta">2–11 ноября 2026 · из Санкт-Петербурга, туда и обратно</div>
+        <div class="desc">Бурдж-Халифа, набережная Дубай Марина, поющие фонтаны и сафари по пустыне. Тёплый ноябрь без жары.</div>
+        <div class="foot">
+          <div class="price"><small>туда + обратно</small><b>от 28 767 ₽</b></div>
+          <button class="btn" data-tour="Дубай — город будущего">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card" data-type="abroad" data-text="турция, курорт аланья 8–15 ноября 2026 · из санкт-петербурга, туда и обратно солнечный курорт на средиземноморском побережье: крепость и красная башня, пляж клеопатры, прогулки на яхте вдоль берега и мягкий климат даже в ноябре.">
+      <div class="pic">
+        <span class="badge">Хит</span>
+        <img src="static/img/alanya.jpg" alt="Турция, курорт Аланья" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Турция, курорт Аланья</h3>
+        <div class="meta">8–15 ноября 2026 · из Санкт-Петербурга, туда и обратно</div>
+        <div class="desc">Солнечный курорт на средиземноморском побережье: крепость и Красная башня, пляж Клеопатры, прогулки на яхте вдоль берега и мягкий климат даже в ноябре.</div>
+        <div class="foot">
+          <div class="price"><small>туда + обратно</small><b>от 75 374 ₽</b></div>
+          <button class="btn" data-tour="Турция, курорт Аланья">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card" data-type="abroad" data-text="египет, хургада и шарм-эль-шейх декабрь 2026 · 7 ночей · из санкт-петербурга, с перелётом тёплое красное море, коралловые рифы и дайвинг, золотые пляжи и горы пустыни на горизонте. питание «всё включено», перелёт из санкт-петербурга.">
+      <div class="pic">
+        <span class="badge">Горящий</span>
+        <img src="static/img/egypt.jpg" alt="Египет, Хургада и Шарм-эль-Шейх" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Египет, Хургада и Шарм-эль-Шейх</h3>
+        <div class="meta">Декабрь 2026 · 7 ночей · из Санкт-Петербурга, с перелётом</div>
+        <div class="desc">Тёплое Красное море, коралловые рифы и дайвинг, золотые пляжи и горы пустыни на горизонте. Питание «всё включено», перелёт из Санкт-Петербурга.</div>
+        <div class="foot">
+          <div class="price"><small>на двоих, «всё включено»</small><b>от 85 150 ₽</b></div>
+          <button class="btn" data-tour="Египет, Хургада и Шарм-эль-Шейх">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card" data-type="abroad" data-text="таиланд, пхукет ноябрь 2026 · из санкт-петербурга, с перелётом андаманское море, белые пляжи, острова пхи-пхи, дайвинг и тайская кухня. длительность и дату поездки выбираете сами.">
+      <div class="pic">
+        
+        <img src="static/img/thailand.jpg" alt="Таиланд, Пхукет" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Таиланд, Пхукет</h3>
+        <div class="meta">Ноябрь 2026 · из Санкт-Петербурга, с перелётом</div>
+        <div class="desc">Андаманское море, белые пляжи, острова Пхи-Пхи, дайвинг и тайская кухня. Длительность и дату поездки выбираете сами.</div>
+        <div class="foot">
+          <div class="price"><small>на двоих, «полный пакет»</small><b>от 151 924 ₽</b></div>
+          <button class="btn" data-tour="Таиланд, Пхукет">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card" data-type="abroad" data-text="вьетнам, нячанг и фукуок ноябрь 2026 · из санкт-петербурга, с перелётом южно-китайское море, пляжи нячанга и фукуока, виллы над водой, вьетнамская кухня и горы с рисовыми террасами. длительность и дату выбираете сами.">
+      <div class="pic">
+        
+        <img src="static/img/vietnam.jpg" alt="Вьетнам, Нячанг и Фукуок" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Вьетнам, Нячанг и Фукуок</h3>
+        <div class="meta">Ноябрь 2026 · из Санкт-Петербурга, с перелётом</div>
+        <div class="desc">Южно-Китайское море, пляжи Нячанга и Фукуока, виллы над водой, вьетнамская кухня и горы с рисовыми террасами. Длительность и дату выбираете сами.</div>
+        <div class="foot">
+          <div class="price"><small>на двоих, «полный пакет»</small><b>от 174 593 ₽</b></div>
+          <button class="btn" data-tour="Вьетнам, Нячанг и Фукуок">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card" data-type="russia" data-text="выборг однодневная поездка на автобусе · из санкт-петербурга средневековый город на границе с финляндией: выборгский замок, старый центр с ратушей и домом бюргера, парк монрепо. даты выезда — по запросу.">
+      <div class="pic">
+        
+        <img src="static/img/vyborg.jpg" alt="Выборг" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Выборг</h3>
+        <div class="meta">Однодневная поездка на автобусе · из Санкт-Петербурга</div>
+        <div class="desc">Средневековый город на границе с Финляндией: Выборгский замок, старый центр с ратушей и Домом Бюргера, парк Монрепо. Даты выезда — по запросу.</div>
+        <div class="foot">
+          <div class="price"><small>за человека</small><b>от 2 950 ₽</b></div>
+          <button class="btn" data-tour="Выборг">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card" data-type="russia" data-text="карелия, карьяла-уикенд 2 дня · субботы в ноябре (7, 14, 21, 28) · из санкт-петербурга выходные на природе: озёра, леса, водопады и мраморный каньон рускеала.">
+      <div class="pic">
+        
+        <img src="static/img/karelia.jpg" alt="Карелия, Карьяла-уикенд" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Карелия, Карьяла-уикенд</h3>
+        <div class="meta">2 дня · субботы в ноябре (7, 14, 21, 28) · из Санкт-Петербурга</div>
+        <div class="desc">Выходные на природе: озёра, леса, водопады и мраморный каньон Рускеала.</div>
+        <div class="foot">
+          <div class="price"><small>на двоих, «уикенд-пакет»</small><b>от 7 500 ₽</b></div>
+          <button class="btn" data-tour="Карелия, Карьяла-уикенд">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card" data-type="custom" data-text="индивидуальный тур ваш маршрут · ваши даты подберём маршрут под ваши даты, бюджет и состав группы: от выходных в области до дальних стран.">
+      <div class="pic">
+        <span class="badge">Эксклюзив</span>
+        <img src="static/img/custom.jpg" alt="Индивидуальный тур" loading="lazy">
+      </div>
+      <div class="body">
+        <h3>Индивидуальный тур</h3>
+        <div class="meta">Ваш маршрут · ваши даты</div>
+        <div class="desc">Подберём маршрут под ваши даты, бюджет и состав группы: от выходных в области до дальних стран.</div>
+        <div class="foot">
+          <div class="price"><small></small><b>по запросу</b></div>
+          <button class="btn" data-tour="Индивидуальный тур">Забронировать</button>
+        </div>
+      </div>
+    </article>
+  
+  </div>
+  <p id="empty" class="meta" hidden>Ничего не найдено — оставьте заявку, подберём индивидуально.</p>
+
+  <div class="perks">
+  
+    <div class="perk"><span>✅</span><h3>Бесплатная отмена</h3><p>Есть бесплатная отмена. Условия зависят от тура, уточняйте у менеджера.</p></div>
+  
+    <div class="perk"><span>💳</span><h3>Оплата картой</h3><p>Оплатите тур банковской картой.</p></div>
+  
+    <div class="perk"><span>👋</span><h3>Помощь менеджера</h3><p>Подберём тур, ответим на вопросы и поможем с бронированием.</p></div>
+  
+    <div class="perk"><span>🗺️</span><h3>Свой маршрут</h3><p>Соберём индивидуальный тур под ваши даты и бюджет.</p></div>
+  
+  </div>
+
+  <div class="cta">
+    <div><h2>Не нашли подходящий тур?</h2><p>Расскажите, куда хотите, — подберём вариант за один день.</p></div>
+    <button class="btn" data-tour="">Оставить заявку</button>
+  </div>
+</main>
+
+<footer><div class="wrap">
+  <div>
+    <img src="static/img/logo-full.png" alt="novo.tours" width="96" height="96" style="display:block;margin-bottom:8px">
+    <b>Novo Tours</b><br>г. Новоселье, ул. Невская, 15к1<br>Ежедневно с 9:00 до 21:00<br>
+    <a href="https://yandex.ru/maps/?text=%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B5%D0%BB%D1%8C%D0%B5%2C%20%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2015%D0%BA1" target="_blank" rel="noopener" style="color:var(--teal)">Показать на карте</a>
+  </div>
+  <div class="ct">
+    <a class="cb" href="tel:+79818820888" style="background:#0a9ba8"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Позвонить</a>
+    <a class="cb" href="https://max.ru/u/f9LHodD0cOJ_UcgmDh1PoygO82yH6kYgnsktMBOxpq2aJs4omzDmRsvX6pQ" target="_blank" rel="noopener" style="background:#6a4bf0"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M12 2a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l5.3-1.3A9.5 9.5 0 1 0 12 2zm-3.5 12.5v-5l3.5 3.5 3.5-3.5v5h-1.6v-2l-1.9 1.9-1.9-1.9v2z"/></svg>Max</a>
+    <a class="cb" href="https://t.me/GordeeffPhoto" target="_blank" rel="noopener" style="background:#229ed9"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M21.5 3.5 2.8 10.7c-1 .4-1 1.2-.2 1.4l4.7 1.5 1.8 5.6c.2.6.4.8.9.8s.6-.2.9-.5l2.2-2.2 4.600 3.400c.8.5 1.500.2 1.700-.8l3.100-14.600c.3-1.200-.5-1.800-1.500-1.400zM9 13.500l9.500-6c.4-.3.8-.1.5.2l-7.800 7-.3 3.200z"/></svg>Telegram</a>
+    <a class="cb" href="mailto:Nowotours@gmail.com" style="background:#f47b20"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1zm9 7.500L4.500 7.500v1.200L12 13.700l7.500-5V7.500z"/></svg>Почта</a>
+  </div>
+  <div>© 2026 Novo Tours</div>
+</div></footer>
+
+<div id="md" class="md"><div class="mb">
+  <button class="mx" id="mx" aria-label="Закрыть">×</button>
+  <h3>Заявка на тур</h3><p class="mm">Оставьте контакты — откроется Telegram с готовым сообщением менеджеру.</p>
+  <label>Тур</label><input id="fT" placeholder="Куда хотите поехать">
+  <label>Ваше имя *</label><input id="fN" autocomplete="name">
+  <label>Телефон *</label><input id="fP" type="tel" autocomplete="tel" placeholder="+7">
+  <label>Комментарий</label><input id="fC" placeholder="Даты, число туристов">
+    <button class="btn" id="fS" style="width:100%;margin-top:14px">Отправить в Telegram</button>
+</div></div>
+<div id="toast"></div>
+<script src="static/js/main.js"></script>
+</body>
+</html>
