@@ -35,11 +35,11 @@ h2{font-size:26px;margin:0}section{padding:12px 0 20px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
 .card{background:var(--c);border-radius:var(--r);overflow:hidden;box-shadow:0 2px 10px #0001;display:flex;flex-direction:column}
 .card:target{outline:3px solid var(--o)}
-.ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,#bfe6ea,#e8f6f7)}
+.ph{position:relative;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,#bfe6ea,#e8f6f7)}
 .ph img{width:100%;height:100%;object-fit:cover;display:block}
-.ph img.tour-photo{object-position:center 20%;transform:scale(1.5);transform-origin:center 20%}
+.ph img.tour-photo{object-position:center 40%}
 .ph img.tour-banner{object-fit:contain;transform:none;background:#d7eaf0}
-.ph.ph-country{aspect-ratio:2.3/1}
+.ph.ph-country{aspect-ratio:16/9}
 .ph img.country-photo{object-fit:cover;transform:none}
 .ph-place{position:absolute;inset:0;display:grid;place-items:center;color:var(--td);font:700 26px/1.2 Georgia,"Times New Roman",serif;opacity:.24;text-transform:uppercase}
 .tag{position:absolute;top:10px;left:10px;background:var(--o);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px}
@@ -70,7 +70,7 @@ dialog form{display:grid;gap:10px}dialog h3{margin:0}.x{position:absolute;right:
 .hp{position:absolute;left:-9999px}.ok{display:none;text-align:center;padding:10px}
 @media(min-width:760px){.mb{display:none}body{padding-bottom:0}}
 @media(max-width:600px){header .w{height:auto;min-height:68px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}nav{display:flex;width:100%;margin:0;justify-content:space-between;gap:8px;font-size:12px;flex-wrap:wrap}nav a{padding:4px 0}.brand-mark{width:40px;height:40px}.brand-name strong{font-size:21px}.brand-name em{font-size:20px}}
-</style><!-- Yandex.Metrika counter -->
+</style><link rel="stylesheet" href="static/css/promo.css"><!-- Yandex.Metrika counter -->
 <script>
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 m[i].l=1*new Date();
@@ -83,10 +83,11 @@ ym(114045220,"init",{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
 <!-- /Yandex.Metrika counter -->
 </head><body>
 <header><div class="w"><a class="brand" href="#" aria-label="Novo Tours — главная"><img class="brand-mark" src="static/img/logo-icon.png" alt=""><span class="brand-name"><strong>NOVO</strong><em>Tours</em></span></a>
-<nav><a href="#tours">Туры</a><a href="hot-tours.html">Горящие туры</a><a href="new-year.html">Новый год</a><a href="#how">Как забронировать</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a></nav></div></header>
+<nav><a href="#tours">Туры</a><a class="nav-hot" href="hot-tours.html">Горящие туры</a><a class="nav-ny" href="new-year.html">Новый год</a><a href="#how">Как забронировать</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a></nav></div></header>
 
 <div class="hero"><div class="w">
 <h1>Найдите путешествие своей мечты</h1><p>Зарубежные туры из Санкт-Петербурга, экскурсии по России и индивидуальные программы</p>
+<div class="promo"><a class="promo-card hot" href="hot-tours.html"><span class="promo-ic hot"></span><span><b>Горящие туры</b><small>Ближайшие вылеты, цены для двоих</small></span></a><a class="promo-card ny" href="new-year.html"><span class="promo-ic ny"></span><span><b>Туры на Новый год</b><small>Подберём даты на праздники</small></span></a></div>
 <form class="search" id="sf" onsubmit="return false">
 <div><label for="fc">Куда</label><select id="fc"><option value="">Любое направление</option></select></div>
 <div><label for="ft">Тип</label><select id="ft"><option value="">Любой</option><option value="abroad">Зарубежные туры</option><option value="russia">Экскурсии по России</option><option value="custom">Индивидуальные</option></select></div>
@@ -166,18 +167,19 @@ var T=[
 {id:"kleopatra-bavyera",n:"Kleopatra Bavyera",t:"abroad",c:"Турция",dt:"27 ноября – 4 декабря 2026 · 7 ночей",k:"2026-11-27",m:[11],img:"alanya.jpg",b:"Завтрак",p:68569,u:"за 2 взрослых",d:"Аланья · Eco Room без кондиционера · 2-я линия, песок.",src:"https://sletat.ru/hot-tour/saint_petersburg/turkey/"},
 {id:"lola-hotel",n:"The Lola Hotel",t:"abroad",c:"Турция",dt:"20–26 ноября 2026 · 6 ночей",k:"2026-11-20",m:[11],img:"istanbul.jpg",b:"Без питания",p:71225,u:"за 2 взрослых",d:"Стамбул, Фатих · номер Economy Double.",src:"https://sletat.ru/hot-tour/saint_petersburg/turkey/"},
 {id:"may-hotel",n:"May",t:"abroad",c:"Турция",dt:"30 ноября – 4 декабря 2026 · 4 ночи",k:"2026-11-30",m:[11],img:"istanbul.jpg",b:"4 ночи",p:71293,u:"за 2 взрослых",d:"Стамбул · номер Standard · без питания.",src:"https://sletat.ru/hot-tour/saint_petersburg/turkey/"},
-{id:"new-badawia",n:"New Badawia Sharm Resort",t:"abroad",c:"Египет",dt:"29 ноября – 8 декабря 2026 · 9 ночей",k:"2026-11-29",m:[11],img:"egypt.jpg",b:"Всё включено",p:80784,u:"за 2 взрослых",d:"Хадаба · Standard Garden View Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"dahab-plaza",n:"Dahab Plaza Hotel",t:"abroad",c:"Египет",dt:"29 ноября – 7 декабря 2026 · 8 ночей",k:"2026-11-29",m:[11],img:"egypt.jpg",b:"Без питания",p:84223,u:"за 2 взрослых",d:"Дахаб · номер Deluxe Room · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"sharm-hills",n:"Sharm Hills Resort",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"egypt.jpg",b:"Без питания",p:86154,u:"за 2 взрослых",d:"Шарм-эль-Шейх · номер Deluxe Twin Room.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"uni-sharm",n:"Uni Sharm Aqua Park",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"egypt.jpg",b:"Завтрак и ужин",p:86817,u:"за 2 взрослых",d:"Хадаба · Standard Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"sand-beach",n:"The Sand Beach",t:"abroad",c:"Таиланд",dt:"21–27 ноября 2026 · 6 ночей",k:"2026-11-21",m:[11],img:"thailand.jpg",b:"Завтрак · первая линия",p:127756,u:"за 2 взрослых",d:"Пляж Джомтьен · номер Deluxe · 3★.",src:"https://sletat.ru/hot-tour/saint_petersburg/thailand/"},
-{id:"mariek",n:"Мариэк",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"abhazia.jpg",imgMode:"country",b:"8,9 · 2-я линия",p:28164,u:"за 2 взрослых",d:"Сухум · без питания · 2-местный номер с отдельным входом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
-{id:"arda",n:"Arda",t:"abroad",c:"Абхазия",dt:"28 ноября – 2 декабря 2026 · 4 ночи",k:"2026-11-28",m:[11],img:"abhazia.jpg",imgMode:"country",b:"Завтрак",p:29160,u:"за 2 взрослых",d:"Гагра · стандартный 2-местный номер без балкона · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
-{id:"grace-black-sea",n:"Grace Black Sea",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"abhazia.jpg",imgMode:"country",b:"Рейтинг 9 · первая линия",p:33222,u:"за 2 взрослых",d:"Сухум · без питания · стандартный номер с балконом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
-{id:"crystal-plaza",n:"Crystal Plaza Hotel",t:"abroad",c:"ОАЭ",dt:"22–28 ноября 2026 · 6 ночей",k:"2026-11-22",m:[11],img:"dubai.jpg",imgMode:"country",b:"Завтрак",p:85392,u:"за 2 взрослых",d:"Шарджа · номер Standard.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
-{id:"red-castle",n:"Red Castle Hotel",t:"abroad",c:"ОАЭ",dt:"24 ноября – 1 декабря 2026 · 7 ночей",k:"2026-11-24",m:[11],img:"dubai.jpg",imgMode:"country",b:"4★ · без питания",p:88384,u:"за 2 взрослых",d:"Шарджа · номер Deluxe Suite · 2-я линия, песок.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
+{id:"new-badawia",n:"New Badawia Sharm Resort",t:"abroad",c:"Египет",dt:"29 ноября – 8 декабря 2026 · 9 ночей",k:"2026-11-29",m:[11],img:"sharm.jpg",fb:"egypt.jpg",b:"Всё включено",p:80784,u:"за 2 взрослых",d:"Хадаба · Standard Garden View Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"dahab-plaza",n:"Dahab Plaza Hotel",t:"abroad",c:"Египет",dt:"29 ноября – 7 декабря 2026 · 8 ночей",k:"2026-11-29",m:[11],img:"dahab.jpg",fb:"egypt.jpg",b:"Без питания",p:84223,u:"за 2 взрослых",d:"Дахаб · номер Deluxe Room · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"sharm-hills",n:"Sharm Hills Resort",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"sharm.jpg",fb:"egypt.jpg",b:"Без питания",p:86154,u:"за 2 взрослых",d:"Шарм-эль-Шейх · номер Deluxe Twin Room.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"uni-sharm",n:"Uni Sharm Aqua Park",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"sharm.jpg",fb:"egypt.jpg",b:"Завтрак и ужин",p:86817,u:"за 2 взрослых",d:"Хадаба · Standard Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"sand-beach",n:"The Sand Beach",t:"abroad",c:"Таиланд",dt:"21–27 ноября 2026 · 6 ночей",k:"2026-11-21",m:[11],img:"pattaya.jpg",fb:"thailand.jpg",b:"Завтрак · первая линия",p:127756,u:"за 2 взрослых",d:"Пляж Джомтьен · номер Deluxe · 3★.",src:"https://sletat.ru/hot-tour/saint_petersburg/thailand/"},
+{id:"mariek",n:"Мариэк",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"sukhum.jpg",fb:"abhazia.jpg",imgMode:"country",b:"8,9 · 2-я линия",p:28164,u:"за 2 взрослых",d:"Сухум · без питания · 2-местный номер с отдельным входом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
+{id:"arda",n:"Arda",t:"abroad",c:"Абхазия",dt:"28 ноября – 2 декабря 2026 · 4 ночи",k:"2026-11-28",m:[11],img:"gagra.jpg",fb:"abhazia.jpg",imgMode:"country",b:"Завтрак",p:29160,u:"за 2 взрослых",d:"Гагра · стандартный 2-местный номер без балкона · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
+{id:"grace-black-sea",n:"Grace Black Sea",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"sukhum.jpg",fb:"abhazia.jpg",imgMode:"country",b:"Рейтинг 9 · первая линия",p:33222,u:"за 2 взрослых",d:"Сухум · без питания · стандартный номер с балконом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
+{id:"crystal-plaza",n:"Crystal Plaza Hotel",t:"abroad",c:"ОАЭ",dt:"22–28 ноября 2026 · 6 ночей",k:"2026-11-22",m:[11],img:"sharjah.jpg",fb:"dubai.jpg",imgMode:"country",b:"Завтрак",p:85392,u:"за 2 взрослых",d:"Шарджа · номер Standard.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
+{id:"red-castle",n:"Red Castle Hotel",t:"abroad",c:"ОАЭ",dt:"24 ноября – 1 декабря 2026 · 7 ночей",k:"2026-11-24",m:[11],img:"sharjah.jpg",fb:"dubai.jpg",imgMode:"country",b:"4★ · без питания",p:88384,u:"за 2 взрослых",d:"Шарджа · номер Deluxe Suite · 2-я линия, песок.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
 {id:"custom",n:"Индивидуальный подбор",t:"custom",c:"Свой маршрут",dt:"Ваш маршрут · ваши даты",k:"2027-01-01",m:[],img:"custom.jpg",b:"Эксклюзив",p:0,u:"по запросу",d:"Подберём маршрут под ваши даты, бюджет и состав группы: от выходных в области до дальних стран."}];
 var $=function(i){return document.getElementById(i)},type="",E=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+function imgFb(i){var f=i.dataset.fb;if(f){i.onerror=null;i.src="static/img/"+f}else i.remove()}
 function goal(n){try{if(window.ym&&YM_ID)ym(YM_ID,"reachGoal",n)}catch(e){}}
 var cs=[];T.forEach(function(x){if(cs.indexOf(x.c)<0)cs.push(x.c)});
 cs.forEach(function(c){var o=document.createElement("option");o.textContent=c;o.value=c;$("fc").appendChild(o)});
@@ -187,7 +189,7 @@ function render(){
  var L=T.filter(function(x){return(!c||x.c===c)&&(!ty||x.t===ty)&&(!m||x.m.indexOf(m)>-1)&&(!bd||!x.p||x.p<=bd)});
  if(!c&&!m&&!bd&&!ty)L=T.slice();
  L.sort($("fs").value==="price"?function(a,b){return(a.p||9e9)-(b.p||9e9)}:function(a,b){return a.k<b.k?-1:1});
- $("grid").innerHTML=L.map(function(x){return'<article class="card" id="tour-'+x.id+'"><div class="ph'+(x.imgMode==='country'?' ph-country':'')+'">'+(x.img?'<img class="'+(x.imgMode==='banner'?'tour-banner':x.imgMode==='country'?'country-photo':x.src?'tour-photo':'')+'" src="static/img/'+x.img+'" alt="'+E(x.n)+'" loading="lazy" onerror="this.remove()">':'<span class="ph-place">'+E(x.c)+'</span>')+(x.b?'<span class="tag">'+E(x.b)+'</span>':'')+'</div><div class="cb"><h3>'+E(x.n)+'</h3><div class="meta">'+E(x.dt)+' · из Санкт-Петербурга</div><div class="d">'+E(x.d)+'</div><div class="pr">'+(x.p?'<small>'+E(x.u)+'</small><b>от '+x.p.toLocaleString("ru-RU")+' ₽</b>':'<b>по запросу</b>')+'</div><div class="row"><button class="btn" data-book="'+E(x.n)+'" data-dates="'+E(x.dt)+'">Забронировать</button></div>'+(x.src?'<a class="source-link" href="'+E(x.src)+'" target="_blank" rel="noopener">Сверить цену на Sletat.ru</a>':'')+'</div></article>'}).join("");
+ $("grid").innerHTML=L.map(function(x){return'<article class="card" id="tour-'+x.id+'"><div class="ph'+(x.imgMode==='country'?' ph-country':'')+'">'+(x.img?'<img class="'+(x.imgMode==='banner'?'tour-banner':x.imgMode==='country'?'country-photo':x.src?'tour-photo':'')+'" src="static/img/'+x.img+'" alt="'+E(x.n)+'" loading="lazy" data-fb="'+(x.fb||'')+'" onerror="imgFb(this)">':'<span class="ph-place">'+E(x.c)+'</span>')+(x.b?'<span class="tag">'+E(x.b)+'</span>':'')+'</div><div class="cb"><h3>'+E(x.n)+'</h3><div class="meta">'+E(x.dt)+' · из Санкт-Петербурга</div><div class="d">'+E(x.d)+'</div><div class="pr">'+(x.p?'<small>'+E(x.u)+'</small><b>от '+x.p.toLocaleString("ru-RU")+' ₽</b>':'<b>по запросу</b>')+'</div><div class="row"><button class="btn" data-book="'+E(x.n)+'" data-dates="'+E(x.dt)+'">Забронировать</button></div>'+(x.src?'<a class="source-link" href="'+E(x.src)+'" target="_blank" rel="noopener">Сверить цену на Sletat.ru</a>':'')+'</div></article>'}).join("");
  $("empty").style.display=L.length?"none":"block";
  [].forEach.call($("chips").children,function(b){b.className=b.dataset.v===ty?"on":""});
 }
