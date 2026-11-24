@@ -1,0 +1,76 @@
+/* Novo Tours — кнопки и акценты. Подключать ПОСЛЕ основных стилей страницы. */
+:root{--pb-hot1:#ee5f1c;--pb-hot2:#f28c28;--pb-hot3:#ffb454;--pb-gold:#ffd98a;--pb-td:#0a6f79;--pb-t:#0e9aa7;
+--ic-flame:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2s6 4.5 6 11a6 6 0 01-12 0c0-2.2 1-3.8 2.2-5 .2 1.8 1.2 2.8 2.3 3C10 7 10.5 4 12 2z'/%3E%3C/svg%3E");
+--ic-snow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2v20M4 7l16 10M4 17L20 7M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5'/%3E%3C/svg%3E");
+--ic-search:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6'/%3E%3Cpath d='M16 16l5 5'/%3E%3C/svg%3E");
+--ic-check:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+--ic-chat:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 5h16v11H9l-5 4z'/%3E%3Ccircle cx='9' cy='10.5' r='1'/%3E%3Ccircle cx='15' cy='10.5' r='1'/%3E%3C/svg%3E");
+--ic-phone:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 4h4l2 5-2 1a11 11 0 005 5l1-2 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z'/%3E%3C/svg%3E");
+--ic-plane:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 4L3 11l6 2 2 6 3-4 5 4z'/%3E%3C/svg%3E");
+--ic-out:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M8 7h9v9'/%3E%3C/svg%3E");
+--ic-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E")}
+
+/* маска-иконка (цвет берётся из currentColor) */
+.nav-hot::before,.nav-ny::before,#go::before,.btn[data-book]::before,.btn.ai::before,
+.button[href^="tel"]::before,.button[href*="t.me"]::before,.button[href*="sletat"]::before,.button-hot::before,.button-ny::before,
+.source::after,.source-link::after,.promo-ic::before,.promo-card::after{content:"";flex:none;width:1.15em;height:1.15em;background:currentColor;
+-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+.nav-hot,.button-hot,.promo-ic.hot{--ic:var(--ic-flame)}
+.nav-ny,.button-ny,.promo-ic.ny{--ic:var(--ic-snow)}
+#go{--ic:var(--ic-search)}.btn[data-book]{--ic:var(--ic-check)}.btn.ai{--ic:var(--ic-chat)}
+.button[href^="tel"]{--ic:var(--ic-phone)}.button[href*="t.me"]{--ic:var(--ic-plane)}.button[href*="sletat"]{--ic:var(--ic-out)}
+.source,.source-link{--ic:var(--ic-out)}.promo-card{--ic:var(--ic-arrow)}
+
+/* пункты меню: Горящие туры / Новый год */
+nav a.nav-hot,nav a.nav-ny{display:inline-flex;align-items:center;gap:7px;padding:8px 15px;border-radius:99px;color:#fff;font-weight:700;
+transition:transform .15s,box-shadow .2s}
+nav a.nav-hot::after,nav a.nav-ny::after{display:none}
+nav a.nav-hot{background:linear-gradient(135deg,var(--pb-hot1),var(--pb-hot2) 60%,var(--pb-hot3));
+box-shadow:0 4px 14px rgba(238,95,28,.4),inset 0 1px 0 rgba(255,255,255,.4);animation:pb-glow 2.8s ease-in-out infinite}
+nav a.nav-ny{background:linear-gradient(135deg,#08525a,var(--pb-td) 55%,var(--pb-t));
+box-shadow:0 4px 14px rgba(10,111,121,.4),inset 0 0 0 1.5px var(--pb-gold)}
+nav a.nav-ny::before{color:var(--pb-gold)}
+nav a.nav-hot:hover,nav a.nav-hot:focus-visible,nav a.nav-ny:hover,nav a.nav-ny:focus-visible{color:#fff;transform:translateY(-2px)}
+nav a.nav-hot[aria-current],nav a.nav-ny[aria-current]{outline:2px solid #fff;outline-offset:-4px}
+@keyframes pb-glow{0%,100%{box-shadow:0 4px 14px rgba(238,95,28,.4),inset 0 1px 0 rgba(255,255,255,.4)}50%{box-shadow:0 4px 24px rgba(238,95,28,.75),inset 0 1px 0 rgba(255,255,255,.4)}}
+
+/* большие кнопки в hero */
+.promo{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin:0 0 18px}
+.promo-card{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:16px;color:#fff;text-decoration:none;transition:transform .15s,box-shadow .2s}
+.promo-card::after{width:20px;height:20px;margin-left:auto;opacity:.9;transition:transform .2s}
+.promo-card:hover,.promo-card:focus-visible{transform:translateY(-3px)}.promo-card:hover::after{transform:translateX(4px)}
+.promo-card b{display:block;font-size:19px;line-height:1.2}.promo-card small{display:block;font-size:13px;opacity:.92}
+.promo-ic{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.22);flex:none}
+.promo-ic::before{width:24px;height:24px}
+.promo-card.hot{background:linear-gradient(135deg,var(--pb-hot1),var(--pb-hot2) 60%,var(--pb-hot3));box-shadow:0 8px 22px rgba(238,95,28,.45)}
+.promo-card.ny{background:radial-gradient(circle at 88% 22%,rgba(255,255,255,.35) 0 2px,transparent 3px),radial-gradient(circle at 70% 78%,rgba(255,255,255,.25) 0 1.5px,transparent 2.5px),linear-gradient(135deg,#08414a,var(--pb-td));
+box-shadow:0 8px 22px rgba(0,0,0,.3),inset 0 0 0 1.5px var(--pb-gold)}
+.promo-card.ny .promo-ic{color:var(--pb-gold);background:rgba(255,217,138,.16)}
+
+/* основные кнопки */
+a.btn,button.btn,.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;color:#fff;font-weight:700;
+text-decoration:none;cursor:pointer;background:linear-gradient(135deg,#f6a23f,#f28c28 55%,#e77a12);
+box-shadow:0 6px 16px rgba(242,140,40,.35),inset 0 1px 0 rgba(255,255,255,.3);transition:transform .15s,box-shadow .2s}
+.button{padding:13px 22px}
+a.btn:hover,button.btn:hover,.button:hover{transform:translateY(-2px);filter:none;box-shadow:0 10px 22px rgba(242,140,40,.45),inset 0 1px 0 rgba(255,255,255,.3)}
+a.btn:active,button.btn:active,.button:active{transform:none}
+.btn.s{background:linear-gradient(135deg,var(--pb-t),var(--pb-td));box-shadow:0 6px 16px rgba(10,111,121,.3),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn.ai,.button.button-light{background:#fff;color:var(--pb-td);box-shadow:0 6px 16px rgba(0,0,0,.16)}
+.button.button-hot{background:linear-gradient(135deg,var(--pb-hot1),var(--pb-hot2) 60%,var(--pb-hot3))}
+.button.button-ny{background:linear-gradient(135deg,#08525a,var(--pb-td));box-shadow:0 6px 16px rgba(0,0,0,.25),inset 0 0 0 1.5px var(--pb-gold)}
+.button.button-ny::before{color:var(--pb-gold)}
+.btn:focus-visible,.button:focus-visible,.promo-card:focus-visible,nav a.nav-hot:focus-visible,nav a.nav-ny:focus-visible,.source:focus-visible,.source-link:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 6px rgba(14,154,167,.6)}
+
+/* «Сверить цену» — аккуратная кнопка вместо ссылки */
+.source,.source-link{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:9px 12px;border:1.5px solid rgba(14,154,167,.35);border-radius:10px;
+background:#f1fafb;color:var(--pb-td);font-size:13px;font-weight:600;text-align:center;text-decoration:none;transition:background .2s,border-color .2s}
+.source:hover,.source-link:hover{background:#e0f3f5;border-color:var(--pb-t);text-decoration:none}
+.source::after,.source-link::after{width:14px;height:14px}
+
+/* нижняя панель на телефоне */
+.mb a{box-shadow:0 4px 10px rgba(10,111,121,.25)}.mb a:first-child{box-shadow:0 4px 10px rgba(242,140,40,.4)}
+
+@media(max-width:600px){header nav{flex-wrap:wrap}
+nav a.nav-hot,nav a.nav-ny{order:-1;flex:1 1 calc(50% - 9px);justify-content:center;padding:10px 12px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){nav a.nav-hot{animation:none}*{transition:none!important}}
+@media(max-width:620px){.header-inner>.nav{width:100%}}
