@@ -7,6 +7,7 @@
 <link rel="canonical" href="https://novotours.ru/">
 <meta property="og:title" content="Novo Tours — туры из Санкт-Петербурга"><meta property="og:type" content="website">
 <meta property="og:url" content="https://novotours.ru/"><meta property="og:image" content="https://novotours.ru/static/img/og-banner.png">
+<link rel="icon" href="static/img/logo-icon.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","name":"Novo Tours","url":"https://novotours.ru/","email":"Nowotours@gmail.com","telephone":"+79818820888","address":{"@type":"PostalAddress","addressLocality":"Новоселье","streetAddress":"ул. Невская, 15к1","addressCountry":"RU"},"openingHours":"Mo-Su 09:00-21:00"}</script>
 <style>
 :root{--t:#0e9aa7;--td:#0a6f79;--o:#f28c28;--bg:#f5fafa;--tx:#17323a;--mut:#5b727a;--c:#fff;--r:16px}
@@ -100,24 +101,46 @@ footer{background:#00293b;border-top:3px solid var(--o)}
 .footer-brand .brand-mark{background:none;border-radius:0;padding:0;height:46px}
 .mb a:first-child{background:var(--o);color:#00293b}
 @media(max-width:600px){.brand-mark{height:38px;width:auto}.brand-name strong,.brand-name em{font-size:22px}.hero{background:linear-gradient(180deg,rgba(0,41,59,.92) 0%,rgba(0,41,59,.75) 100%),url(static/img/hero-bg.jpg) right center/cover no-repeat,#00293b}}
+ .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.hero-actions .btn{margin:0}
+.country-preview,.journal-preview{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.country-preview article,.journal-preview article{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px #0001}
+.country-preview a,.journal-preview a{display:block;text-decoration:none}.country-preview img,.journal-preview img{width:100%;height:150px;object-fit:cover;display:block}
+.country-preview h3,.journal-preview h3{margin:12px 14px 4px}.country-preview p,.journal-preview p{margin:0 14px 14px;color:var(--mut);font-size:14px}
+.season-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.season-strip article{padding:18px;border-radius:14px;background:#fff;box-shadow:0 2px 10px #0001}.season-strip h3{margin:0 0 5px}.season-strip p{margin:0;color:var(--mut)}
+.country-preview article,.journal-preview article{min-height:220px}.country-preview article a,.journal-preview article a{height:100%}
+.country-preview h3,.journal-preview h3{text-wrap:balance}
+img{image-rendering:auto}
 </style>
 </head><body>
 <header><div class="w"><a class="brand" href="#" aria-label="Novo Tours — главная"><img class="brand-mark" src="static/img/logo-icon.png" alt=""><span class="brand-name"><strong>Novo</strong><em>Tours</em></span></a>
-<nav><a href="#tours">Туры</a><a class="nav-hot" href="hot-tours.html">Горящие туры</a><a class="nav-ny" href="new-year.html">Новый год</a><a href="#how">Как забронировать</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a></nav></div></header>
+<nav><a href="#tours">Туры</a><a href="countries/">Страны мира</a><a class="nav-hot" href="hot-tours.html">Горящие туры</a><a class="nav-ny" href="new-year.html">Новый год</a><a href="blog/">Журнал</a><a href="#contacts">Контакты</a></nav></div></header>
 
 <div class="hero"><div class="w">
 <img class="slogan" src="static/img/slogan.png" alt="Открывай мир с нами!"><div class="hero-tag">Твой путешественный партнёр</div>
-<h1>Найдите путешествие своей мечты</h1><p>Зарубежные туры из Санкт-Петербурга, экскурсии по России и индивидуальные программы</p>
+<h1>Мир ближе, чем кажется</h1><p>Открывайте новые страны, находите лучшие путешествия и создавайте свои истории</p>
+<div class="hero-actions"><a class="btn" href="#tours">Найти путешествие</a><a class="btn ai" href="countries/">Исследовать страны</a></div>
 <form class="search" id="sf" onsubmit="return false">
 <div><label for="fc">Куда</label><select id="fc"><option value="">Любое направление</option></select></div>
 <div><label for="ft">Тип</label><select id="ft"><option value="">Любой</option><option value="abroad">Зарубежные туры</option><option value="russia">Экскурсии по России</option><option value="custom">Индивидуальные</option></select></div>
 <div><label for="fm">Когда</label><select id="fm"><option value="">Любой месяц</option><option value="11">Ноябрь</option><option value="12">Декабрь</option></select></div>
 <div><label for="fb">Бюджет до, ₽</label><input id="fb" type="number" min="0" step="1000" inputmode="numeric" placeholder="любой"></div>
 <div><label for="fp">Туристов</label><select id="fp"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+<div><label for="fd">Желаемые даты</label><input id="fd" type="text" placeholder="Например, декабрь"></div>
+<div><label for="fn">Ночей</label><select id="fn"><option value="">Любое количество</option><option>3–5</option><option>6–8</option><option>9–12</option><option>13+</option></select></div>
 <div style="align-self:end"><button class="btn" style="width:100%" id="go">Найти туры</button></div>
 </form></div></div>
 
 <main class="w">
+<section id="countries">
+<div class="bar"><h2>Популярные направления</h2><a class="btn s" href="countries/">Все страны мира</a></div>
+<div class="country-preview">
+<article><a href="countries/turkey/"><img src="static/img/alanya.jpg" alt="Пляж и море в Турции" loading="lazy"><h3>Турция</h3><p>Море, история и гастрономия</p></a></article>
+<article><a href="countries/egypt/"><img src="static/img/egypt.jpg" alt="Пляж и курорт в Египте" loading="lazy"><h3>Египет</h3><p>Тёплое море и древние города</p></a></article>
+<article><a href="countries/thailand/"><img src="static/img/thailand.jpg" alt="Тропический пляж Таиланда" loading="lazy"><h3>Таиланд</h3><p>Острова, кухня и тропическая природа</p></a></article>
+<article><a href="countries/georgia/"><img src="static/img/georgia.jpg" alt="Пейзаж Грузии" loading="lazy"><h3>Грузия</h3><p>Горы, вино и гостеприимство</p></a></article>
+</div></section>
+
 <section id="tours">
 <div class="bar"><h2>Актуальные туры</h2>
 <div><label for="fs">Сортировка</label><select id="fs"><option value="date">По дате вылета</option><option value="price">Сначала дешевле</option></select></div></div>
@@ -126,6 +149,19 @@ footer{background:#00293b;border-top:3px solid var(--o)}
 <div class="empty" id="empty"><p><b>По вашим условиям туров пока нет.</b></p><p>Подберём вариант индивидуально — оставьте заявку.</p><button class="btn" data-book="Подбор тура">Подобрать тур</button></div>
 <p class="d">Предложения Sletat.ru проверены 17 ноября 2026 года. Цены указаны за 2 взрослых и могут измениться; перед бронированием уточните актуальную стоимость и наличие мест. <a href="https://sletat.ru/hot-tour/saint_petersburg/" target="_blank" rel="noopener">Все горячие туры из Санкт-Петербурга на Sletat.ru</a>.</p>
 </section>
+
+<section id="seasons"><div class="bar"><h2>Идеи для путешествий по сезонам</h2></div><div class="season-strip">
+<article><h3>Зима</h3><p>Теплые моря, Новый год и зимние города.</p></article>
+<article><h3>Весна</h3><p>Комфортный климат, цветение и короткие туры.</p></article>
+<article><h3>Лето</h3><p>Пляжный отдых и семейные маршруты.</p></article>
+<article><h3>Осень</h3><p>Гастрономические поездки и тихий сезон.</p></article>
+</div></section>
+
+<section id="journal"><div class="bar"><h2>Полезные статьи путешественника</h2><a class="btn s" href="blog/">Перейти в журнал</a></div><div class="journal-preview">
+<article><a href="blog/"><img src="static/img/hero-bg.jpg" alt="Путешествие к морю" loading="lazy"><h3>Как выбрать направление</h3><p>Сезон, бюджет и формат отдыха без лишних компромиссов.</p></a></article>
+<article><a href="blog/"><img src="static/img/egypt.jpg" alt="Пляжный отдых" loading="lazy"><h3>Пляжный отдых по-своему</h3><p>Что сравнить перед бронированием отеля у моря.</p></a></article>
+<article><a href="blog/"><img src="static/img/karelia.jpg" alt="Маршрут по России" loading="lazy"><h3>Маршруты выходного дня</h3><p>Как составить короткую поездку и не перегрузить план.</p></a></article>
+</div></section>
 
 <section><div class="bar"><h2>Почему Novo Tours</h2></div><div class="ben">
 <div><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><h3>Условия отмены</h3><p>Для ряда туров есть бесплатная отмена. Условия зависят от тура — расскажем до оплаты.</p></div>
@@ -187,16 +223,16 @@ var T=[
 {id:"kleopatra-bavyera",n:"Kleopatra Bavyera",t:"abroad",c:"Турция",dt:"27 ноября – 4 декабря 2026 · 7 ночей",k:"2026-11-27",m:[11],img:"alanya.jpg",b:"Завтрак",p:68569,u:"за 2 взрослых",d:"Аланья · Eco Room без кондиционера · 2-я линия, песок.",src:"https://sletat.ru/hot-tour/saint_petersburg/turkey/"},
 {id:"lola-hotel",n:"The Lola Hotel",t:"abroad",c:"Турция",dt:"20–26 ноября 2026 · 6 ночей",k:"2026-11-20",m:[11],img:"istanbul.jpg",b:"Без питания",p:71225,u:"за 2 взрослых",d:"Стамбул, Фатих · номер Economy Double.",src:"https://sletat.ru/hot-tour/saint_petersburg/turkey/"},
 {id:"may-hotel",n:"May",t:"abroad",c:"Турция",dt:"30 ноября – 4 декабря 2026 · 4 ночи",k:"2026-11-30",m:[11],img:"istanbul.jpg",b:"4 ночи",p:71293,u:"за 2 взрослых",d:"Стамбул · номер Standard · без питания.",src:"https://sletat.ru/hot-tour/saint_petersburg/turkey/"},
-{id:"new-badawia",n:"New Badawia Sharm Resort",t:"abroad",c:"Египет",dt:"29 ноября – 8 декабря 2026 · 9 ночей",k:"2026-11-29",m:[11],img:"sharm.jpg",fb:"egypt.jpg",b:"Всё включено",p:80784,u:"за 2 взрослых",d:"Хадаба · Standard Garden View Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"dahab-plaza",n:"Dahab Plaza Hotel",t:"abroad",c:"Египет",dt:"29 ноября – 7 декабря 2026 · 8 ночей",k:"2026-11-29",m:[11],img:"dahab.jpg",fb:"egypt.jpg",b:"Без питания",p:84223,u:"за 2 взрослых",d:"Дахаб · номер Deluxe Room · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"sharm-hills",n:"Sharm Hills Resort",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"sharm.jpg",fb:"egypt.jpg",b:"Без питания",p:86154,u:"за 2 взрослых",d:"Шарм-эль-Шейх · номер Deluxe Twin Room.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"uni-sharm",n:"Uni Sharm Aqua Park",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"sharm.jpg",fb:"egypt.jpg",b:"Завтрак и ужин",p:86817,u:"за 2 взрослых",d:"Хадаба · Standard Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"sand-beach",n:"The Sand Beach",t:"abroad",c:"Таиланд",dt:"21–27 ноября 2026 · 6 ночей",k:"2026-11-21",m:[11],img:"pattaya.jpg",fb:"thailand.jpg",b:"Завтрак · первая линия",p:127756,u:"за 2 взрослых",d:"Пляж Джомтьен · номер Deluxe · 3★.",src:"https://sletat.ru/hot-tour/saint_petersburg/thailand/"},
-{id:"mariek",n:"Мариэк",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"sukhum.jpg",fb:"abhazia.jpg",imgMode:"country",b:"8,9 · 2-я линия",p:28164,u:"за 2 взрослых",d:"Сухум · без питания · 2-местный номер с отдельным входом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
-{id:"arda",n:"Arda",t:"abroad",c:"Абхазия",dt:"28 ноября – 2 декабря 2026 · 4 ночи",k:"2026-11-28",m:[11],img:"gagra.jpg",fb:"abhazia.jpg",imgMode:"country",b:"Завтрак",p:29160,u:"за 2 взрослых",d:"Гагра · стандартный 2-местный номер без балкона · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
-{id:"grace-black-sea",n:"Grace Black Sea",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"sukhum.jpg",fb:"abhazia.jpg",imgMode:"country",b:"Рейтинг 9 · первая линия",p:33222,u:"за 2 взрослых",d:"Сухум · без питания · стандартный номер с балконом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
-{id:"crystal-plaza",n:"Crystal Plaza Hotel",t:"abroad",c:"ОАЭ",dt:"22–28 ноября 2026 · 6 ночей",k:"2026-11-22",m:[11],img:"sharjah.jpg",fb:"dubai.jpg",imgMode:"country",b:"Завтрак",p:85392,u:"за 2 взрослых",d:"Шарджа · номер Standard.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
-{id:"red-castle",n:"Red Castle Hotel",t:"abroad",c:"ОАЭ",dt:"24 ноября – 1 декабря 2026 · 7 ночей",k:"2026-11-24",m:[11],img:"sharjah.jpg",fb:"dubai.jpg",imgMode:"country",b:"4★ · без питания",p:88384,u:"за 2 взрослых",d:"Шарджа · номер Deluxe Suite · 2-я линия, песок.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
+{id:"new-badawia",n:"New Badawia Sharm Resort",t:"abroad",c:"Египет",dt:"29 ноября – 8 декабря 2026 · 9 ночей",k:"2026-11-29",m:[11],img:"egypt.jpg",b:"Всё включено",p:80784,u:"за 2 взрослых",d:"Хадаба · Standard Garden View Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"dahab-plaza",n:"Dahab Plaza Hotel",t:"abroad",c:"Египет",dt:"29 ноября – 7 декабря 2026 · 8 ночей",k:"2026-11-29",m:[11],img:"egypt.jpg",b:"Без питания",p:84223,u:"за 2 взрослых",d:"Дахаб · номер Deluxe Room · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"sharm-hills",n:"Sharm Hills Resort",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"egypt.jpg",b:"Без питания",p:86154,u:"за 2 взрослых",d:"Шарм-эль-Шейх · номер Deluxe Twin Room.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"uni-sharm",n:"Uni Sharm Aqua Park",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"egypt.jpg",b:"Завтрак и ужин",p:86817,u:"за 2 взрослых",d:"Хадаба · Standard Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"sand-beach",n:"The Sand Beach",t:"abroad",c:"Таиланд",dt:"21–27 ноября 2026 · 6 ночей",k:"2026-11-21",m:[11],img:"thailand.jpg",b:"Завтрак · первая линия",p:127756,u:"за 2 взрослых",d:"Пляж Джомтьен · номер Deluxe · 3★.",src:"https://sletat.ru/hot-tour/saint_petersburg/thailand/"},
+{id:"mariek",n:"Мариэк",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"abhazia.jpg",imgMode:"country",b:"8,9 · 2-я линия",p:28164,u:"за 2 взрослых",d:"Сухум · без питания · 2-местный номер с отдельным входом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
+{id:"arda",n:"Arda",t:"abroad",c:"Абхазия",dt:"28 ноября – 2 декабря 2026 · 4 ночи",k:"2026-11-28",m:[11],img:"abhazia.jpg",imgMode:"country",b:"Завтрак",p:29160,u:"за 2 взрослых",d:"Гагра · стандартный 2-местный номер без балкона · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
+{id:"grace-black-sea",n:"Grace Black Sea",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"abhazia.jpg",imgMode:"country",b:"Рейтинг 9 · первая линия",p:33222,u:"за 2 взрослых",d:"Сухум · без питания · стандартный номер с балконом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
+{id:"crystal-plaza",n:"Crystal Plaza Hotel",t:"abroad",c:"ОАЭ",dt:"22–28 ноября 2026 · 6 ночей",k:"2026-11-22",m:[11],img:"dubai.jpg",imgMode:"country",b:"Завтрак",p:85392,u:"за 2 взрослых",d:"Шарджа · номер Standard.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
+{id:"red-castle",n:"Red Castle Hotel",t:"abroad",c:"ОАЭ",dt:"24 ноября – 1 декабря 2026 · 7 ночей",k:"2026-11-24",m:[11],img:"dubai.jpg",imgMode:"country",b:"4★ · без питания",p:88384,u:"за 2 взрослых",d:"Шарджа · номер Deluxe Suite · 2-я линия, песок.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
 {id:"custom",n:"Индивидуальный подбор",t:"custom",c:"Свой маршрут",dt:"Ваш маршрут · ваши даты",k:"2027-01-01",m:[],img:"custom.jpg",b:"Эксклюзив",p:0,u:"по запросу",d:"Подберём маршрут под ваши даты, бюджет и состав группы: от выходных в области до дальних стран."}];
 var $=function(i){return document.getElementById(i)},type="",E=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
 function imgFb(i){var f=i.dataset.fb;if(f){i.onerror=null;i.src="static/img/"+f}else i.remove()}

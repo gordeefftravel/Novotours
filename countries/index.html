@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Страны мира — путеводители и туры | Novo Tours</title>
+<meta name="description" content="Каталог стран для путешествий: лучшие сезоны, направления и идеи маршрутов. Подбор тура от Novo Tours.">
+<link rel="canonical" href="https://novotours.ru/countries/">
+<link rel="stylesheet" href="../static/css/catalog.css"><link rel="stylesheet" href="../static/css/brand.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Страны мира — Novo Tours","url":"https://novotours.ru/countries/"}</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap header-inner"><a class="brand" href="../"><img src="../static/img/logo-icon.png" alt=""><span><strong>Novo</strong> <em>Tours</em></span></a><nav class="nav"><a href="../">Главная</a><a class="nav-hot" href="../hot-tours.html">Горящие туры</a><a class="nav-ny" href="../new-year.html">Новый год</a><a href="../blog/">Журнал</a></nav></div></header>
+<main><section class="hero"><div class="wrap"><h1>Страны мира</h1><p>Выберите направление и узнайте больше о сезонах, достопримечательностях и особенностях поездки.</p></div></section>
+<section class="content wrap"><div class="request" style="margin-bottom:18px"><div><label for="country-search">Поиск по странам</label><input id="country-search" type="search" placeholder="Например, Турция"></div><div><label for="region-filter">Регион</label><select id="region-filter"><option value="">Все регионы</option><option>Азия</option><option>Европа</option><option>Африка</option><option>Ближний Восток</option><option>Северная Америка</option><option>Южная Америка</option><option>Океания</option></select></div><div><label for="rest-filter">Тип отдыха</label><select id="rest-filter"><option value="">Любой отдых</option><option>Пляжный отдых</option><option>Экскурсионный отдых</option><option>Городской отдых</option></select></div></div><div id="country-grid" class="tour-grid"></div></section></main>
+<footer class="site-footer"><div class="wrap">Novo Tours · Новоселье, ул. Невская, 15к1 · Ежедневно 9:00–21:00<div class="footer-links"><a href="../">На главную</a><a href="../hot-tours.html">Горящие туры</a></div></div></footer>
+<script src="countries.js"></script><script>
+(function(){var grid=document.getElementById("country-grid"),q=document.getElementById("country-search"),region=document.getElementById("region-filter"),rest=document.getElementById("rest-filter");
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function draw(){var text=q.value.trim().toLowerCase();grid.innerHTML=COUNTRIES.filter(function(c){return(!text||c.name.toLowerCase().includes(text)||c.description.toLowerCase().includes(text))&&(!region.value||c.region===region.value)&&(!rest.value||c.rest===rest.value)}).map(function(c){return'<article class="tour-card"><a href="'+c.slug+'/" style="text-decoration:none"><div class="tour-photo"><img src="../static/img/'+esc(c.image)+'" alt="'+esc(c.name)+'" loading="lazy"></div><div class="tour-body"><h2>'+esc(c.name)+'</h2><div class="tour-meta">'+esc(c.region)+' · '+esc(c.rest)+'</div><div class="tour-desc">'+esc(c.description)+'</div><div class="tour-meta">Лучший сезон: '+esc(c.season)+'</div><div class="tour-price" style="font-size:16px">'+esc(c.cost)+'</div></div></a></article>'}).join("")}
+[q,region,rest].forEach(function(el){el.addEventListener(el===q?"input":"change",draw)});draw()}());
+</script></body></html>
