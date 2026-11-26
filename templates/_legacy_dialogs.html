@@ -1,0 +1,17 @@
+<dialog id="bk"><button class="x" onclick="bk.close()" aria-label="Закрыть">×</button>
+<form id="bf" autocomplete="on"><h3>Заявка на тур</h3>
+<div><label for="bt">Тур</label><input id="bt" name="tour" placeholder="Например, Турция"></div>
+<div class="g2"><div><label for="bc">Город вылета</label><input id="bc" value="Санкт-Петербург"></div><div><label for="bp">Туристов</label><input id="bp" value="2"></div></div>
+<div><label for="bd">Желаемые даты</label><input id="bd" placeholder="например, 8–15 ноября"></div>
+<div class="g2"><div><label for="bdu">Продолжительность</label><select id="bdu"><option value="">Не важно</option><option>3–5 ночей</option><option>6–8 ночей</option><option>9–11 ночей</option><option>12–14 ночей</option><option>15+ ночей</option></select></div><div><label for="bb">Бюджет, ₽</label><input id="bb" placeholder="например, до 150 000"></div></div>
+<div><label for="bn">Ваше имя *</label><input id="bn" required autocomplete="name"></div>
+<div><label for="bph">Телефон *</label><input id="bph" type="tel" required autocomplete="tel" inputmode="tel" placeholder="+7"></div>
+<div><label for="bm">Комментарий</label><textarea id="bm" rows="2"></textarea></div>
+<input class="hp" id="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="ck"><input type="checkbox" id="ag" required><span>Согласен на обработку персональных данных и с <a href="#" onclick="pol.showModal();return false">политикой конфиденциальности</a></span></label>
+<button class="btn" type="submit">Отправить заявку</button></form>
+<div class="ok" id="ok"><h3>Спасибо!</h3><p id="okt">Заявка принята. Мы свяжемся с вами с 9:00 до 21:00.</p><button class="btn s" onclick="bk.close()">Закрыть</button></div></dialog>
+
+<dialog id="pol"><button class="x" onclick="pol.close()" aria-label="Закрыть">×</button><h3>Политика конфиденциальности</h3>
+<p class="d">Мы собираем имя, телефон и данные о желаемой поездке только для подбора тура и связи с вами. Данные не передаются третьим лицам, кроме случаев, необходимых для оформления вашей поездки.</p>
+<p class="d">Оператор данных: Novo Tours, г. Новоселье, ул. Невская, 15к1, Nowotours@gmail.com. <!-- TODO владельцу: добавить наименование юрлица/ИП, ИНН/ОГРН и согласовать текст с юристом --></p></dialog>

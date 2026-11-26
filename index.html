@@ -1,76 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
-<meta charset="utf-8">
+<html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Novo Tours — туры и экскурсии из Санкт-Петербурга</title>
-<meta name="description" content="Novo Tours: зарубежные туры из Санкт-Петербурга, экскурсии по России и индивидуальные программы. Новоселье, ул. Невская, 15к1. Ежедневно 9:00–21:00.">
+<title>Novo Tours — туры из Санкт-Петербурга, путеводители по странам</title><meta name="description" content="Мир ближе, чем кажется: путеводители по странам, горящие туры из Санкт-Петербурга, экскурсии и индивидуальные маршруты. Новоселье, ул. Невская, 15к1. Ежедневно 9:00–21:00.">
 <link rel="canonical" href="https://novotours.ru/">
-<meta property="og:title" content="Novo Tours — туры из Санкт-Петербурга"><meta property="og:type" content="website">
-<meta property="og:url" content="https://novotours.ru/"><meta property="og:image" content="https://novotours.ru/static/img/og-banner.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","name":"Novo Tours","url":"https://novotours.ru/","email":"Nowotours@gmail.com","telephone":"+79818820888","address":{"@type":"PostalAddress","addressLocality":"Новоселье","streetAddress":"ул. Невская, 15к1","addressCountry":"RU"},"openingHours":"Mo-Su 09:00-21:00"}</script>
-<style>
-:root{--t:#0e9aa7;--td:#0a6f79;--o:#f28c28;--bg:#f5fafa;--tx:#17323a;--mut:#5b727a;--c:#fff;--r:16px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--tx);background:var(--bg);padding-bottom:64px}
-img{max-width:100%}a{color:inherit}.w{max-width:1100px;margin:0 auto;padding:0 16px}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);box-shadow:0 1px 8px #0001;border-bottom:1px solid #e6eff0;padding-top:env(safe-area-inset-top,0);backdrop-filter:blur(14px)}
-header .w{display:flex;align-items:center;gap:16px;height:68px}
-.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex:none}
-.brand-mark{width:42px;height:42px;object-fit:contain}
-.brand-name{display:inline-flex;align-items:baseline;gap:5px;line-height:1}
-.brand-name strong{font-family:"Trebuchet MS",Arial,sans-serif;font-size:23px;font-weight:800;letter-spacing:.08em;color:var(--td)}
-.brand-name em{font-family:Georgia,"Times New Roman",serif;font-size:21px;font-style:italic;font-weight:600;color:var(--o)}
-nav{margin-left:auto;display:flex;gap:14px;font-size:13px;font-weight:600}nav a{position:relative;padding:8px 0;text-decoration:none;color:var(--mut);transition:color .2s}nav a::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:2px;background:var(--o);transition:right .2s}nav a:hover,nav a:focus-visible{color:var(--td)}nav a:hover::after,nav a:focus-visible::after{right:0}
-.hero{background:linear-gradient(135deg,var(--td),var(--t));color:#fff;padding:40px 0 56px}
-.hero h1{font-size:clamp(26px,5vw,42px);margin:0 0 8px}.hero p{margin:0 0 20px;opacity:.9}
-.search{background:#fff;color:var(--tx);border-radius:var(--r);padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;box-shadow:0 8px 24px #0003}
-label{font-size:13px;color:var(--mut);display:block}
-select,input,textarea{width:100%;font:inherit;padding:11px;border:1px solid #cfdde0;border-radius:10px;background:#fff;color:var(--tx)}
-.btn{display:inline-block;border:0;border-radius:10px;background:var(--o);color:#fff;font-weight:600;padding:12px 18px;cursor:pointer;text-decoration:none;text-align:center}
-.btn:hover{filter:brightness(.95)}.btn.s{background:var(--t)}.btn.ai{background:#fff;color:var(--td);margin:6px}
-.bar{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin:28px 0 12px}
-h2{font-size:26px;margin:0}section{padding:12px 0 20px}
-.chips{display:flex;gap:8px;flex-wrap:wrap}.chips button{border:1px solid #cfdde0;background:#fff;border-radius:99px;padding:7px 14px;cursor:pointer;font:inherit}
-.chips button.on{background:var(--t);color:#fff;border-color:var(--t)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-.card{background:var(--c);border-radius:var(--r);overflow:hidden;box-shadow:0 2px 10px #0001;display:flex;flex-direction:column}
-.card:target{outline:3px solid var(--o)}
-.ph{position:relative;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,#bfe6ea,#e8f6f7)}
-.ph img{width:100%;height:100%;object-fit:cover;display:block}
-.ph img.tour-photo{object-position:center 40%}
-.ph img.tour-banner{object-fit:contain;transform:none;background:#d7eaf0}
-.ph.ph-country{aspect-ratio:16/9}
-.ph img.country-photo{object-fit:cover;transform:none}
-.ph-place{position:absolute;inset:0;display:grid;place-items:center;color:var(--td);font:700 26px/1.2 Georgia,"Times New Roman",serif;opacity:.24;text-transform:uppercase}
-.tag{position:absolute;top:10px;left:10px;background:var(--o);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px}
-.cb{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}.cb h3{margin:0;font-size:18px}
-.meta{font-size:13px;color:var(--mut)}.d{font-size:14px;color:var(--mut)}
-.pr{margin-top:auto;padding-top:8px}.pr b{font-size:22px;color:var(--td)}.pr small{display:block;color:var(--mut);font-size:12px}
-.row{display:flex;gap:8px;margin-top:8px}.row .btn{flex:1;padding:10px 8px}
-.source-link{display:block;margin-top:8px;color:var(--td);font-size:12px;text-align:right;text-decoration:none}.source-link:hover{text-decoration:underline}
-.empty{padding:24px;background:#fff;border-radius:var(--r);text-align:center;display:none}
-.ben{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.ben div{background:#fff;border-radius:var(--r);padding:16px;box-shadow:0 2px 10px #0001}
-.ben svg{width:30px;height:30px;stroke:var(--t);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.ben h3{margin:8px 0 4px;font-size:17px}.ben p{margin:0;color:var(--mut);font-size:14px}
-.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;padding:0;list-style:none}
-.steps li{counter-increment:s;background:#fff;border-radius:var(--r);padding:16px 16px 16px 56px;position:relative;box-shadow:0 2px 10px #0001}
-.steps li:before{content:counter(s);position:absolute;left:14px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--t);color:#fff;display:grid;place-items:center;font-weight:700}
-details{background:#fff;border-radius:12px;padding:12px 16px;margin-bottom:8px;box-shadow:0 1px 6px #0001}summary{cursor:pointer;font-weight:600}details p{margin:8px 0 0;color:var(--mut)}
-.cta{background:var(--td);color:#fff;border-radius:var(--r);padding:28px;text-align:center;margin:20px 0}.cta h2{margin-bottom:8px}.cta p{margin:0 0 16px;opacity:.9}
-footer{background:#10282e;color:#cfe3e6;padding:28px 0 20px;font-size:14px}.footer-brand{margin-bottom:12px}.footer-brand .brand-mark{height:42px;margin:0;background:#fff;border-radius:50%;padding:2px}.footer-brand .brand-name strong{color:#fff}
-.ct{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.ct a{display:inline-flex;align-items:center;gap:8px;background:#ffffff1a;padding:10px 14px;border-radius:10px;text-decoration:none;color:#fff}
-.ct svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.fl{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}.fl a{color:#9fc7cc;cursor:pointer}
-.mb{position:fixed;left:0;right:0;bottom:0;z-index:25;display:flex;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom,0));background:#fff;box-shadow:0 -2px 10px #0002}
-.mb a{flex:1;text-align:center;padding:11px 4px;border-radius:10px;background:var(--t);color:#fff;text-decoration:none;font-weight:600;font-size:14px}.mb a:first-child{background:var(--o)}
-dialog{border:0;border-radius:var(--r);padding:20px;width:min(480px,94vw);max-height:90vh}dialog::backdrop{background:#0008}
-dialog form{display:grid;gap:10px}dialog h3{margin:0}.x{position:absolute;right:12px;top:8px;border:0;background:none;font-size:26px;cursor:pointer}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ck{display:flex;gap:8px;font-size:13px;color:var(--mut);align-items:flex-start}.ck input{width:auto;margin-top:3px}
-.hp{position:absolute;left:-9999px}.ok{display:none;text-align:center;padding:10px}
-@media(min-width:760px){.mb{display:none}body{padding-bottom:0}}
-@media(max-width:600px){header .w{height:auto;min-height:68px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}nav{display:flex;width:100%;margin:0;justify-content:space-between;gap:8px;font-size:12px;flex-wrap:wrap}nav a{padding:4px 0}.brand-mark{width:40px;height:40px}.brand-name strong{font-size:21px}.brand-name em{font-size:20px}}
-</style><link rel="stylesheet" href="static/css/promo.css"><!-- Yandex.Metrika counter -->
+<meta property="og:site_name" content="Novo Tours"><meta property="og:type" content="website"><meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Novo Tours — туры из Санкт-Петербурга, путеводители по странам"><meta property="og:description" content="Мир ближе, чем кажется: путеводители по странам, горящие туры из Санкт-Петербурга, экскурсии и индивидуальные маршруты. Новоселье, ул. Невская, 15к1. Ежедневно 9:00–21:00."><meta property="og:url" content="https://novotours.ru/"><meta property="og:image" content="https://novotours.ru/static/img/og-banner.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#00293b"><link rel="icon" href="/static/img/logo-icon.png">
+<link rel="stylesheet" href="/static/css/nova.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TravelAgency","name":"Novo Tours","url":"https://novotours.ru/","email":"Nowotours@gmail.com","telephone":"+79818820888","address":{"@type":"PostalAddress","addressLocality":"Новоселье","streetAddress":"ул. Невская, 15к1","addressCountry":"RU"},"openingHours":"Mo-Su 09:00-21:00","image":"https://novotours.ru/static/img/og-banner.jpg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Novo Tours","url":"https://novotours.ru/"}</script><!-- Yandex.Metrika counter -->
 <script>
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 m[i].l=1*new Date();
@@ -80,93 +17,85 @@ k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNo
 ym(114045220,"init",{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",accurateTrackBounce:true,trackLinks:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/114045220" style="position:absolute;left:-9999px" alt=""></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<style>
-:root{--t:#0a6c9c;--td:#00293b;--o:#ffb000;--bg:#f2f8fb;--tx:#10303f;--mut:#566f7c}
-body{font-family:"Segoe UI",Inter,system-ui,-apple-system,Roboto,sans-serif}
-header{background:rgba(0,41,59,.97);border-bottom:3px solid var(--o);box-shadow:0 2px 14px #0005}
-.brand-mark{width:auto;height:46px}
-.brand-name{gap:6px}
-.brand-name strong{font-family:"Segoe UI",Inter,Arial,sans-serif;font-size:26px;font-weight:800;letter-spacing:0;color:#fff}
-.brand-name em{font-family:"Segoe UI",Inter,Arial,sans-serif;font-size:26px;font-style:normal;font-weight:800;color:var(--o)}
-nav a{color:#d3e6ef}nav a:hover,nav a:focus-visible{color:var(--o)}
-.hero{background:linear-gradient(90deg,#00293b 0%,#00293b 32%,rgba(0,41,59,.7) 60%,rgba(0,41,59,.15) 100%),url(static/img/hero-bg.jpg) right center/cover no-repeat,#00293b;padding:36px 0 56px}
-.hero .slogan{display:block;width:min(340px,70%);height:auto;margin:0 0 6px}
-.hero .hero-tag{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--o);font-weight:700;margin-bottom:14px}
-.btn{background:var(--o);color:#00293b;font-weight:700}
-.btn.s{background:var(--t);color:#fff}.btn.ai{background:#fff;color:var(--td)}
-.cta{background:linear-gradient(135deg,#00293b,#0a5a82)}
-footer{background:#00293b;border-top:3px solid var(--o)}
-.footer-brand .brand-mark{background:none;border-radius:0;padding:0;height:46px}
-.mb a:first-child{background:var(--o);color:#00293b}
-@media(max-width:600px){.brand-mark{height:38px;width:auto}.brand-name strong,.brand-name em{font-size:22px}.hero{background:linear-gradient(180deg,rgba(0,41,59,.92) 0%,rgba(0,41,59,.75) 100%),url(static/img/hero-bg.jpg) right center/cover no-repeat,#00293b}}
-</style>
-</head><body>
-<header><div class="w"><a class="brand" href="#" aria-label="Novo Tours — главная"><img class="brand-mark" src="static/img/logo-icon.png" alt=""><span class="brand-name"><strong>Novo</strong><em>Tours</em></span></a>
-<nav><a href="#tours">Туры</a><a class="nav-hot" href="hot-tours.html">Горящие туры</a><a class="nav-ny" href="new-year.html">Новый год</a><a href="#how">Как забронировать</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a></nav></div></header>
+<!-- /Yandex.Metrika counter --></head>
+<body><a class="nv-skip" href="#main">К содержанию</a><header class="nv-header"><div class="nv-wrap"><a class="nv-brand" href="/" aria-label="Novo Tours — главная"><img src="/static/img/logo-icon.png" alt="" width="62" height="42"><b>Novo<i>Tours</i></b></a><button class="nv-burger" aria-label="Меню" aria-expanded="false"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><nav class="nv-nav" aria-label="Основная навигация"><a href="/countries/">Страны</a><a href="/#tours">Горящие туры</a><a href="/blog/">Журнал</a><a href="/new-year.html">Новый год</a><a href="/favorites/">Избранное</a><a href="/#contacts">Контакты</a><a class="nv-cta" href="#" data-nv-book="Подбор тура">Подобрать тур</a></nav></div></header><main id="main"><section class="nv-hero fx" style="--hero:url(/static/img/hero-crop.webp)"><div class="nv-wrap">
+<div class="nv-eyebrow" style="color:#ffb454">Novo Tours · Discover the World</div><h1>Мир ближе, чем кажется</h1>
+<p class="sub">Путешествия и открытия: путеводители по странам, горящие туры из Санкт-Петербурга и маршруты, собранные под вас.</p>
+<div class="acts"><a class="nv-btn" href="#tours">Найти путешествие</a><a class="nv-btn ghost" href="/countries/">Исследовать страны</a></div>
+<form class="nv-pick" id="pick" autocomplete="off"><div><label for="pk-c">Страна</label><select id="pk-c" name="country"><option value="">Любая</option><option value="Турция" data-slug="turkey">Турция</option><option value="Египет" data-slug="egypt">Египет</option><option value="Таиланд" data-slug="thailand">Таиланд</option><option value="ОАЭ" data-slug="uae">ОАЭ</option><option value="Вьетнам" data-slug="vietnam">Вьетнам</option><option value="Китай" data-slug="china">Китай</option><option value="Япония" data-slug="japan">Япония</option><option value="Индонезия" data-slug="indonesia">Индонезия</option><option value="Шри-Ланка" data-slug="sri-lanka">Шри-Ланка</option><option value="Мальдивы" data-slug="maldives">Мальдивы</option><option value="Индия" data-slug="india">Индия</option><option value="Италия" data-slug="italy">Италия</option><option value="Франция" data-slug="france">Франция</option><option value="Испания" data-slug="spain">Испания</option><option value="Грузия" data-slug="georgia">Грузия</option></select></div>
+<div><label for="pk-f">Город вылета</label><input id="pk-f" name="from" value="Санкт-Петербург"></div><div><label for="pk-d">Дата</label><input id="pk-d" name="date" placeholder="например, март"></div>
+<div><label for="pk-p">Туристов</label><select id="pk-p" name="pax"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+<div><label for="pk-u">Продолжительность</label><select id="pk-u" name="dur"><option>Не важно</option><option>3–5 ночей</option><option>6–8 ночей</option><option>9–11 ночей</option><option>12–14 ночей</option><option>15+ ночей</option></select></div><div><label for="pk-b">Бюджет, ₽</label><input id="pk-b" name="budget" placeholder="до 150 000"></div>
+<button class="nv-btn go" type="submit">Подобрать тур</button></form></div></section>
 
-<div class="hero"><div class="w">
-<img class="slogan" src="static/img/slogan.png" alt="Открывай мир с нами!"><div class="hero-tag">Твой путешественный партнёр</div>
-<h1>Найдите путешествие своей мечты</h1><p>Зарубежные туры из Санкт-Петербурга, экскурсии по России и индивидуальные программы</p>
-<form class="search" id="sf" onsubmit="return false">
+<section class="nv-sec"><div class="nv-wrap"><div class="nv-eyebrow">Популярные направления</div><h2 class="nv-h2">Куда летят чаще всего</h2><p class="nv-lead">Путеводители с маршрутами, сезонами и практической информацией.</p><div class="nv-grid"><article class="nv-card nv-reveal" data-slug="turkey" data-cont="Ближний Восток" data-types="beach,culture,family,gastro" data-bud="2" data-name="Турция" data-text="турция море, история и гастрономия в одной поездке пляжный отдых культура и история семейный отдых гастрономия стамбул анталья аланья каппадокия">
+<button class="nv-fav" data-fav="c:turkey" aria-pressed="false" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z"/></svg></button><a href="/countries/turkey/" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;flex:1">
+<div class="nv-ph" style="--c1:#0e9aa7;--c2:#f28c28"><picture><source type="image/webp" srcset="/static/img/alanya.webp"><img src="/static/img/alanya.jpg" alt="Турция — Море, история и гастрономия в одной поездке" loading="lazy" decoding="async" width="640" height="480"></picture><span class="ttl">Турция</span></div>
+<div class="nv-cb"><p>Море, история и гастрономия в одной поездке</p><div class="nv-meta"><span>май–июнь, сентябрь–октябрь</span><span>Пляжный отдых</span><span>Культура и история</span><span>Средний бюджет</span></div></div></a></article><article class="nv-card nv-reveal" data-slug="egypt" data-cont="Африка" data-types="beach,culture,family,nature" data-bud="2" data-name="Египет" data-text="египет красное море круглый год и древние пирамиды пляжный отдых культура и история семейный отдых природа и активный отдых шарм хургада дахаб каир пирамиды красное море">
+<button class="nv-fav" data-fav="c:egypt" aria-pressed="false" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z"/></svg></button><a href="/countries/egypt/" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;flex:1">
+<div class="nv-ph" style="--c1:#d96d1c;--c2:#0e9aa7"><picture><source type="image/webp" srcset="/static/img/egypt.webp"><img src="/static/img/egypt.jpg" alt="Египет — Красное море круглый год и древние пирамиды" loading="lazy" decoding="async" width="640" height="480"></picture><span class="ttl">Египет</span></div>
+<div class="nv-cb"><p>Красное море круглый год и древние пирамиды</p><div class="nv-meta"><span>октябрь–апрель</span><span>Пляжный отдых</span><span>Культура и история</span><span>Средний бюджет</span></div></div></a></article><article class="nv-card nv-reveal" data-slug="thailand" data-cont="Азия" data-types="beach,culture,gastro,romantic,nature" data-bud="3" data-name="Таиланд" data-text="таиланд острова, храмы и лучшая уличная еда азии пляжный отдых культура и история гастрономия романтика природа и активный отдых пхукет паттайя бангкок самуи краби чиангмай">
+<button class="nv-fav" data-fav="c:thailand" aria-pressed="false" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z"/></svg></button><a href="/countries/thailand/" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;flex:1">
+<div class="nv-ph" style="--c1:#0e9aa7;--c2:#f4b942"><picture><source type="image/webp" srcset="/static/img/thailand.webp"><img src="/static/img/thailand.jpg" alt="Таиланд — Острова, храмы и лучшая уличная еда Азии" loading="lazy" decoding="async" width="640" height="480"></picture><span class="ttl">Таиланд</span></div>
+<div class="nv-cb"><p>Острова, храмы и лучшая уличная еда Азии</p><div class="nv-meta"><span>ноябрь–март</span><span>Пляжный отдых</span><span>Культура и история</span><span>Выше среднего</span></div></div></a></article><article class="nv-card nv-reveal" data-slug="uae" data-cont="Ближний Восток" data-types="city,beach,family,romantic" data-bud="3" data-name="ОАЭ" data-text="оаэ небоскрёбы, пустыня и пляжи с гарантией солнца города пляжный отдых семейный отдых романтика дубай абу-даби шарджа эмираты">
+<button class="nv-fav" data-fav="c:uae" aria-pressed="false" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z"/></svg></button><a href="/countries/uae/" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;flex:1">
+<div class="nv-ph" style="--c1:#1b4965;--c2:#f28c28"><picture><source type="image/webp" srcset="/static/img/dubai.webp"><img src="/static/img/dubai.jpg" alt="ОАЭ — Небоскрёбы, пустыня и пляжи с гарантией солнца" loading="lazy" decoding="async" width="640" height="480"></picture><span class="ttl">ОАЭ</span></div>
+<div class="nv-cb"><p>Небоскрёбы, пустыня и пляжи с гарантией солнца</p><div class="nv-meta"><span>ноябрь–март</span><span>Города</span><span>Пляжный отдых</span><span>Выше среднего</span></div></div></a></article><article class="nv-card nv-reveal" data-slug="vietnam" data-cont="Азия" data-types="beach,nature,gastro,culture" data-bud="2" data-name="Вьетнам" data-text="вьетнам пляжи юга, фонари хойана и лучшая лапша мира пляжный отдых природа и активный отдых гастрономия культура и история нячанг фукуок ханой хойан ханой сайгон">
+<button class="nv-fav" data-fav="c:vietnam" aria-pressed="false" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z"/></svg></button><a href="/countries/vietnam/" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;flex:1">
+<div class="nv-ph" style="--c1:#2a9d8f;--c2:#f4a261"><picture><source type="image/webp" srcset="/static/img/vietnam.webp"><img src="/static/img/vietnam.jpg" alt="Вьетнам — Пляжи юга, фонари Хойана и лучшая лапша мира" loading="lazy" decoding="async" width="640" height="480"></picture><span class="ttl">Вьетнам</span></div>
+<div class="nv-cb"><p>Пляжи юга, фонари Хойана и лучшая лапша мира</p><div class="nv-meta"><span>ноябрь–апрель</span><span>Пляжный отдых</span><span>Природа и активный отдых</span><span>Средний бюджет</span></div></div></a></article><article class="nv-card nv-reveal" data-slug="maldives" data-cont="Азия" data-types="beach,romantic,nature" data-bud="4" data-name="Мальдивы" data-text="мальдивы бирюзовые лагуны, бунгало над водой и тишина пляжный отдых романтика природа и активный отдых мале ари баа атолл бунгало">
+<button class="nv-fav" data-fav="c:maldives" aria-pressed="false" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z"/></svg></button><a href="/countries/maldives/" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;flex:1">
+<div class="nv-ph" style="--c1:#00b4d8;--c2:#f4a261"><picture><source type="image/webp" srcset="/static/img/maldives.webp"><img src="/static/img/maldives.jpg" alt="Мальдивы — Бирюзовые лагуны, бунгало над водой и тишина" loading="lazy" decoding="async" width="640" height="480"></picture><span class="ttl">Мальдивы</span></div>
+<div class="nv-cb"><p>Бирюзовые лагуны, бунгало над водой и тишина</p><div class="nv-meta"><span>декабрь–апрель</span><span>Пляжный отдых</span><span>Романтика</span><span>Премиум</span></div></div></a></article></div></div></section>
+
+<section class="nv-sec alt"><div class="nv-wrap"><section id="tours">
+<div class="bar"><h2 class="nv-h2">Горящие предложения из Санкт-Петербурга</h2>
+<div><label for="fs">Сортировка</label><select id="fs"><option value="date">По дате вылета</option><option value="price">Сначала дешевле</option></select></div></div>
+<form class="nv-filters" id="sf" onsubmit="return false" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
 <div><label for="fc">Куда</label><select id="fc"><option value="">Любое направление</option></select></div>
 <div><label for="ft">Тип</label><select id="ft"><option value="">Любой</option><option value="abroad">Зарубежные туры</option><option value="russia">Экскурсии по России</option><option value="custom">Индивидуальные</option></select></div>
 <div><label for="fm">Когда</label><select id="fm"><option value="">Любой месяц</option><option value="11">Ноябрь</option><option value="12">Декабрь</option></select></div>
 <div><label for="fb">Бюджет до, ₽</label><input id="fb" type="number" min="0" step="1000" inputmode="numeric" placeholder="любой"></div>
 <div><label for="fp">Туристов</label><select id="fp"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></div>
-<div style="align-self:end"><button class="btn" style="width:100%" id="go">Найти туры</button></div>
-</form></div></div>
-
-<main class="w">
-<section id="tours">
-<div class="bar"><h2>Актуальные туры</h2>
-<div><label for="fs">Сортировка</label><select id="fs"><option value="date">По дате вылета</option><option value="price">Сначала дешевле</option></select></div></div>
-<div class="chips" id="chips"></div><br>
+<div style="align-self:end"><button class="btn" style="width:100%" id="go">Найти туры</button></div></form><div class="chips" id="chips"></div><br>
 <div class="grid" id="grid"></div>
 <div class="empty" id="empty"><p><b>По вашим условиям туров пока нет.</b></p><p>Подберём вариант индивидуально — оставьте заявку.</p><button class="btn" data-book="Подбор тура">Подобрать тур</button></div>
 <p class="d">Предложения Sletat.ru проверены 17 ноября 2026 года. Цены указаны за 2 взрослых и могут измениться; перед бронированием уточните актуальную стоимость и наличие мест. <a href="https://sletat.ru/hot-tour/saint_petersburg/" target="_blank" rel="noopener">Все горячие туры из Санкт-Петербурга на Sletat.ru</a>.</p>
-</section>
+</section></div></section>
 
-<section><div class="bar"><h2>Почему Novo Tours</h2></div><div class="ben">
-<div><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><h3>Условия отмены</h3><p>Для ряда туров есть бесплатная отмена. Условия зависят от тура — расскажем до оплаты.</p></div>
-<div><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg><h3>Оплата картой</h3><p>Оплатите тур банковской картой.</p></div>
-<div><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg><h3>Помощь менеджера</h3><p>Подберём тур, ответим на вопросы и поможем с бронированием.</p></div>
-<div><svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg><h3>Свой маршрут</h3><p>Соберём индивидуальный тур под ваши даты и бюджет.</p></div>
-</div></section>
+<section class="nv-sec"><div class="nv-wrap"><div class="nv-eyebrow">Страны, которые стоит посетить</div><h2 class="nv-h2">Ещё идеи</h2><div class="nv-tiles"><a class="nv-tile" href="/countries/china/" style="text-decoration:none"><h3>Китай</h3><p>Великая стена, терракотовая армия и мегаполисы будущего</p></a><a class="nv-tile" href="/countries/japan/" style="text-decoration:none"><h3>Япония</h3><p>Сакура, храмы и технологии, которые живут в гармонии</p></a><a class="nv-tile" href="/countries/indonesia/" style="text-decoration:none"><h3>Индонезия</h3><p>Бали, вулканы и тысячи островов</p></a><a class="nv-tile" href="/countries/sri-lanka/" style="text-decoration:none"><h3>Шри-Ланка</h3><p>Чай, слоны и пляжи на одном острове</p></a><a class="nv-tile" href="/countries/india/" style="text-decoration:none"><h3>Индия</h3><p>Тадж-Махал, дворцы Раджастана и пляжи Гоа</p></a><a class="nv-tile" href="/countries/italy/" style="text-decoration:none"><h3>Италия</h3><p>Рим, Венеция, Флоренция и лучшая в мире еда</p></a><a class="nv-tile" href="/countries/france/" style="text-decoration:none"><h3>Франция</h3><p>Париж, замки Луары и Лазурный берег</p></a><a class="nv-tile" href="/countries/spain/" style="text-decoration:none"><h3>Испания</h3><p>Гауди, фламенко и пляжи Средиземного моря</p></a><a class="nv-tile" href="/countries/georgia/" style="text-decoration:none"><h3>Грузия</h3><p>Горы, вино и гостеприимство</p></a></div><p style="margin-top:20px"><a class="nv-btn line" href="/countries/">Весь каталог стран</a></p></div></section>
 
-<section id="how"><div class="bar"><h2>Как забронировать</h2></div>
-<ol class="steps"><li><b>Заявка</b><br><span class="d">Выберите тур или опишите пожелания.</span></li><li><b>Подбор</b><br><span class="d">Менеджер свяжется, уточнит детали и актуальную цену.</span></li><li><b>Договор и оплата</b><br><span class="d">Оформляем документы, оплата картой.</span></li><li><b>Документы и вылет</b><br><span class="d">Передаём документы на тур и сопровождаем вопросы.</span></li></ol></section>
+<section class="nv-sec alt"><div class="nv-wrap"><div class="nv-eyebrow">По сезонам</div><h2 class="nv-h2">Идеи для путешествий по сезонам</h2><p class="nv-lead">Страны сгруппированы по лучшим месяцам для поездки.</p><div class="nv-tiles"><div class="nv-tile"><h3>Зима</h3><p><a href="/countries/egypt/" style="color:var(--td);font-weight:700;text-decoration:none">Египет</a>, <a href="/countries/thailand/" style="color:var(--td);font-weight:700;text-decoration:none">Таиланд</a>, <a href="/countries/uae/" style="color:var(--td);font-weight:700;text-decoration:none">ОАЭ</a>, <a href="/countries/vietnam/" style="color:var(--td);font-weight:700;text-decoration:none">Вьетнам</a></p></div><div class="nv-tile"><h3>Весна</h3><p><a href="/countries/china/" style="color:var(--td);font-weight:700;text-decoration:none">Китай</a>, <a href="/countries/japan/" style="color:var(--td);font-weight:700;text-decoration:none">Япония</a>, <a href="/countries/turkey/" style="color:var(--td);font-weight:700;text-decoration:none">Турция</a>, <a href="/countries/egypt/" style="color:var(--td);font-weight:700;text-decoration:none">Египет</a></p></div><div class="nv-tile"><h3>Лето</h3><p><a href="/countries/turkey/" style="color:var(--td);font-weight:700;text-decoration:none">Турция</a>, <a href="/countries/indonesia/" style="color:var(--td);font-weight:700;text-decoration:none">Индонезия</a>, <a href="/countries/spain/" style="color:var(--td);font-weight:700;text-decoration:none">Испания</a>, <a href="/countries/georgia/" style="color:var(--td);font-weight:700;text-decoration:none">Грузия</a></p></div><div class="nv-tile"><h3>Осень</h3><p><a href="/countries/china/" style="color:var(--td);font-weight:700;text-decoration:none">Китай</a>, <a href="/countries/turkey/" style="color:var(--td);font-weight:700;text-decoration:none">Турция</a>, <a href="/countries/egypt/" style="color:var(--td);font-weight:700;text-decoration:none">Египет</a>, <a href="/countries/uae/" style="color:var(--td);font-weight:700;text-decoration:none">ОАЭ</a></p></div></div></div></section>
 
-<section id="faq"><div class="bar"><h2>Вопросы и ответы</h2></div>
-<details><summary>Как оплатить тур?</summary><p>Банковской картой. Порядок оплаты менеджер объяснит при оформлении.</p></details>
+<section class="nv-sec"><div class="nv-wrap nv-split"><div><div class="nv-eyebrow">Экскурсии и впечатления</div><h2 class="nv-h2">Что увидеть своими глазами</h2><p class="nv-lead">Главные места направлений — с описанием, дорогой и лучшим временем визита.</p></div><div class="nv-tiles" style="grid-template-columns:1fr 1fr"><div class="nv-tile"><h3>Великая Китайская стена (Бадалин, Муцяньюй)</h3><p>Китай · Крупнейший оборонительный памятник мира. Бадалин самый известный и людный; Муцяньюй — спокойнее.</p><a href="/countries/china/#sights">Подробнее →</a></div><div class="nv-tile"><h3>Храм Сэнсо-дзи</h3><p>Япония · Старейший храм Токио с воротами Каминаримон и торговой улицей Накамисэ.</p><a href="/countries/japan/#sights">Подробнее →</a></div><div class="nv-tile"><h3>Рисовые террасы Тегаллаланг</h3><p>Индонезия · Каскады зелёных террас на склонах — классический вид Бали. Есть качели и кафе у обрыва.</p><a href="/countries/indonesia/#sights">Подробнее →</a></div><div class="nv-tile"><h3>Сигирия (Львиная скала)</h3><p>Шри-Ланка · Крепость на скале с фресками и садами V века. Подъём по лестницам занимает около часа.</p><a href="/countries/sri-lanka/#sights">Подробнее →</a></div><div class="nv-tile"><h3>Тадж-Махал</h3><p>Индия · Белый мраморный мавзолей XVII века. По пятницам для туристов закрыт.</p><a href="/countries/india/#sights">Подробнее →</a></div><div class="nv-tile"><h3>Колизей и Римский форум</h3><p>Италия · Амфитеатр I века и руины центра Древнего Рима. Билеты именные и продаются онлайн заранее.</p><a href="/countries/italy/#sights">Подробнее →</a></div></div></div></section>
+
+<section class="nv-sec alt"><div class="nv-wrap"><div class="nv-eyebrow">Необычные места мира</div><h2 class="nv-h2">Там, где нет толп</h2><div class="nv-tiles"><div class="nv-tile"><h3>Каппадокия (Гёреме)</h3><p>Турция</p><a href="/countries/turkey/#where">Все необычные места →</a></div><div class="nv-tile"><h3>Монастырь Святой Екатерины и гора Моисея</h3><p>Египет</p><a href="/countries/egypt/#where">Все необычные места →</a></div><div class="nv-tile"><h3>Краби и Рейли</h3><p>Таиланд</p><a href="/countries/thailand/#where">Все необычные места →</a></div><div class="nv-tile"><h3>Heart of Sharjah</h3><p>ОАЭ</p><a href="/countries/uae/#where">Все необычные места →</a></div><div class="nv-tile"><h3>Туннели Кути и Хошимин</h3><p>Вьетнам</p><a href="/countries/vietnam/#where">Все необычные места →</a></div><div class="nv-tile"><h3>Гуйлинь и река Ли</h3><p>Китай</p><a href="/countries/china/#where">Все необычные места →</a></div></div></div></section>
+
+<section class="nv-sec"><div class="nv-wrap"><div class="nv-eyebrow">Полезные советы</div><h2 class="nv-h2">Nova Travel Journal</h2><div class="nv-tiles"><a class="nv-tile" href="/blog/byudzhetnye-puteshestviya-kak-ekonomit/" style="text-decoration:none"><h3>Бюджетное путешествие: 8 способов не переплачивать</h3><p>Как сократить расходы на поездку, не теряя удовольствия.</p></a><a class="nv-tile" href="/blog/gastro-tur-po-turcii/" style="text-decoration:none"><h3>Гастрономический тур по Турции: что и где пробовать</h3><p>Стамбульские рынки, анатолийская выпечка и десерты: маршрут для тех, кто едет за вкусом.</p></a><a class="nv-tile" href="/blog/kak-sobrat-dokumenty-v-poezdku/" style="text-decoration:none"><h3>Документы в поездку: чек-лист на 10 минут</h3><p>Что проверить до покупки тура и перед вылетом, чтобы не остаться на границе.</p></a></div><p style="margin-top:20px"><a class="nv-btn line" href="/blog/">Все статьи</a></p></div></section>
+
+<section class="nv-sec alt"><div class="nv-wrap"><div class="nv-eyebrow">Преимущества</div><h2 class="nv-h2">Почему Novo Tours</h2><div class="nv-tiles"><div class="nv-tile nv-reveal"><svg class="nv-ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><h3>Условия отмены</h3><p>Для ряда туров есть бесплатная отмена. Условия зависят от тура — расскажем до оплаты.</p></div><div class="nv-tile nv-reveal"><svg class="nv-ico" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg><h3>Оплата картой</h3><p>Оплатите тур банковской картой.</p></div><div class="nv-tile nv-reveal"><svg class="nv-ico" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg><h3>Помощь менеджера</h3><p>Подберём тур, ответим на вопросы и поможем с бронированием.</p></div><div class="nv-tile nv-reveal"><svg class="nv-ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg><h3>Свой маршрут</h3><p>Соберём индивидуальный тур под ваши даты и бюджет.</p></div><div class="nv-tile nv-reveal"><svg class="nv-ico" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Каждый день 9–21</h3><p>Офис в Новоселье работает ежедневно; быстрее всего отвечаем в Telegram и Max.</p></div><div class="nv-tile nv-reveal"><svg class="nv-ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M2 14l20-8-8 16-2-7z"/></svg><h3>Вылет из Санкт-Петербурга</h3><p>Все туры на сайте — из Санкт-Петербурга; другой город укажите в заявке.</p></div></div></div></section>
+
+<section class="nv-sec" id="faq"><div class="nv-wrap"><h2 class="nv-h2">Вопросы и ответы</h2><div style="margin-top:14px"><details><summary>Как оплатить тур?</summary><p>Банковской картой. Порядок оплаты менеджер объяснит при оформлении.</p></details>
 <details><summary>Можно ли отменить поездку?</summary><p>Условия отмены зависят от конкретного тура. Уточните их у менеджера до оплаты.</p></details>
 <details><summary>Можно ли тур не из Санкт-Петербурга?</summary><p>Все туры на сайте — из Санкт-Петербурга. Если нужен другой город вылета, напишите в заявке.</p></details>
 <details><summary>Вы собираете индивидуальные туры?</summary><p>Да: подберём маршрут под даты, бюджет и состав группы — от выходных в области до дальних стран.</p></details>
-<details><summary>Как быстро с вами свяжутся?</summary><p>Офис работает ежедневно с 9:00 до 21:00. Быстрее всего ответим в Telegram или Max.</p></details>
-</section>
+<details><summary>Как быстро с вами свяжутся?</summary><p>Офис работает ежедневно с 9:00 до 21:00. Быстрее всего ответим в Telegram или Max.</p></details></div></div></section>
 
-<div class="cta"><h2>Не нашли подходящий тур?</h2><p>Расскажите, куда хотите, — подберём вариант.</p><button class="btn" data-book="Подбор тура">Оставить заявку</button> <a class="btn ai" href="https://t.me/Novotoursaibot" target="_blank" rel="noopener" data-g="ai">Спросить ИИ-менеджера</a></div>
-</main>
-
-<footer id="contacts"><div class="w">
-<a class="brand footer-brand" href="#" aria-label="Novo Tours — главная"><img class="brand-mark" src="static/img/logo-icon.png" alt=""><span class="brand-name"><strong>Novo</strong><em>Tours</em></span></a><br>
-г. Новоселье, ул. Невская, 15к1 · Ежедневно с 9:00 до 21:00 · <a href="https://yandex.ru/maps/?text=%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B5%D0%BB%D1%8C%D0%B5%2C%20%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2015%D0%BA1" target="_blank" rel="noopener">Показать на карте</a>
-<div class="ct">
-<a href="https://t.me/Novotoursaibot" target="_blank" rel="noopener" data-g="ai"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><circle cx="9" cy="10.5" r="1"/><circle cx="15" cy="10.5" r="1"/></svg>ИИ-менеджер</a>
-<a href="tel:+79818820888" data-g="call"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2 1a11 11 0 005 5l1-2 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>Позвонить</a>
-<a href="https://max.ru/u/f9LHodD0cOJ_UcgmDh1PoygO82yH6kYgnsktMBOxpq2aJs4omzDmRsvX6pQ" target="_blank" rel="noopener" data-g="max"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Max</a>
-<a href="https://t.me/GordeeffPhoto" target="_blank" rel="noopener" data-g="tg"><svg viewBox="0 0 24 24"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/></svg>Telegram</a>
-<a href="mailto:Nowotours@gmail.com" data-g="mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Почта</a></div>
-<div class="fl"><a onclick="pol.showModal()">Политика конфиденциальности</a><span>© 2026 Novo Tours</span></div>
-</div></footer>
-
-<div class="mb"><a href="#" data-book="Подбор тура">Оставить заявку</a><a href="tel:+79818820888">Позвонить</a><a href="https://t.me/GordeeffPhoto" target="_blank" rel="noopener">Telegram</a></div>
-
+<section class="nv-sec"><div class="nv-wrap"><div class="nv-band"><h2>Не нашли подходящий тур?</h2><p>Расскажите, куда хотите, — подберём вариант.</p><button class="nv-btn" data-book="Подбор тура">Оставить заявку</button> <a class="nv-btn ghost" href="https://t.me/Novotoursaibot" target="_blank" rel="noopener" data-g="ai">Спросить ИИ-менеджера</a></div></div></section></main><footer class="nv-footer" id="contacts"><div class="nv-wrap">
+<div class="nv-fcols"><div><a class="nv-brand" href="/"><img src="/static/img/logo-icon.png" alt="" width="62" height="42" loading="lazy"><b>Novo<i>Tours</i></b></a>
+<p>Туры из Санкт-Петербурга, экскурсии по России и индивидуальные маршруты. Discover the World.</p>
+<p>г. Новоселье, ул. Невская, 15к1<br>Ежедневно 9:00–21:00 · <a href="https://yandex.ru/maps/?text=%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B5%D0%BB%D1%8C%D0%B5%2C%20%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2015%D0%BA1" target="_blank" rel="noopener">на карте</a></p></div>
+<div><h4>Страны</h4><ul><li><a href="/countries/turkey/">Турция</a></li><li><a href="/countries/egypt/">Египет</a></li><li><a href="/countries/thailand/">Таиланд</a></li><li><a href="/countries/uae/">ОАЭ</a></li><li><a href="/countries/vietnam/">Вьетнам</a></li><li><a href="/countries/china/">Китай</a></li><li><a href="/countries/japan/">Япония</a></li><li><a href="/countries/indonesia/">Индонезия</a></li></ul></div><div><h4>&nbsp;</h4><ul><li><a href="/countries/sri-lanka/">Шри-Ланка</a></li><li><a href="/countries/maldives/">Мальдивы</a></li><li><a href="/countries/india/">Индия</a></li><li><a href="/countries/italy/">Италия</a></li><li><a href="/countries/france/">Франция</a></li><li><a href="/countries/spain/">Испания</a></li><li><a href="/countries/georgia/">Грузия</a></li><li><a href="/countries/"><b>Все страны →</b></a></li></ul></div>
+<div><h4>Разделы</h4><ul><li><a href="/blog/">Nova Travel Journal</a></li><li><a href="/#tours">Горящие туры</a></li><li><a href="/hot-tours.html">Подборка горящих</a></li><li><a href="/new-year.html">Новый год</a></li><li><a href="/favorites/">Избранное</a></li><li><a href="#" onclick="document.getElementById('pol').showModal();return false">Конфиденциальность</a></li></ul></div></div>
+<div class="nv-ct"><a href="https://t.me/Novotoursaibot" target="_blank" rel="noopener" data-g="ai"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>ИИ-менеджер</a><a href="tel:+79818820888" data-g="call"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2 1a11 11 0 005 5l1-2 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>+7 981 882-08-88</a><a href="https://max.ru/u/f9LHodD0cOJ_UcgmDh1PoygO82yH6kYgnsktMBOxpq2aJs4omzDmRsvX6pQ" target="_blank" rel="noopener" data-g="max"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Max</a><a href="https://t.me/GordeeffPhoto" target="_blank" rel="noopener" data-g="tg"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/></svg>Telegram</a><a href="mailto:Nowotours@gmail.com" data-g="mail"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Nowotours@gmail.com</a></div>
+<p class="nv-src" style="color:#8fb3bb">© 2026 Novo Tours. Цены и условия туров указаны ориентировочно и подтверждаются менеджером перед оплатой.</p></div></footer>
+<div class="nv-mb"><button data-nv-book="Подбор тура">Подобрать тур</button><a href="tel:+79818820888">Позвонить</a><a href="https://t.me/GordeeffPhoto" target="_blank" rel="noopener">Telegram</a></div>
 <dialog id="bk"><button class="x" onclick="bk.close()" aria-label="Закрыть">×</button>
 <form id="bf" autocomplete="on"><h3>Заявка на тур</h3>
 <div><label for="bt">Тур</label><input id="bt" name="tour" placeholder="Например, Турция"></div>
 <div class="g2"><div><label for="bc">Город вылета</label><input id="bc" value="Санкт-Петербург"></div><div><label for="bp">Туристов</label><input id="bp" value="2"></div></div>
 <div><label for="bd">Желаемые даты</label><input id="bd" placeholder="например, 8–15 ноября"></div>
+<div class="g2"><div><label for="bdu">Продолжительность</label><select id="bdu"><option value="">Не важно</option><option>3–5 ночей</option><option>6–8 ночей</option><option>9–11 ночей</option><option>12–14 ночей</option><option>15+ ночей</option></select></div><div><label for="bb">Бюджет, ₽</label><input id="bb" placeholder="например, до 150 000"></div></div>
 <div><label for="bn">Ваше имя *</label><input id="bn" required autocomplete="name"></div>
 <div><label for="bph">Телефон *</label><input id="bph" type="tel" required autocomplete="tel" inputmode="tel" placeholder="+7"></div>
 <div><label for="bm">Комментарий</label><textarea id="bm" rows="2"></textarea></div>
@@ -175,9 +104,6 @@ footer{background:#00293b;border-top:3px solid var(--o)}
 <button class="btn" type="submit">Отправить заявку</button></form>
 <div class="ok" id="ok"><h3>Спасибо!</h3><p id="okt">Заявка принята. Мы свяжемся с вами с 9:00 до 21:00.</p><button class="btn s" onclick="bk.close()">Закрыть</button></div></dialog>
 
-<dialog id="pol"><button class="x" onclick="pol.close()" aria-label="Закрыть">×</button><h3>Политика конфиденциальности</h3>
-<p class="d">Мы собираем имя, телефон и данные о желаемой поездке только для подбора тура и связи с вами. Данные не передаются третьим лицам, кроме случаев, необходимых для оформления вашей поездки.</p>
-<p class="d">Оператор данных: Novo Tours, г. Новоселье, ул. Невская, 15к1, Nowotours@gmail.com. <!-- TODO владельцу: добавить наименование юрлица/ИП, ИНН/ОГРН и согласовать текст с юристом --></p></dialog>
 
 <script>
 /* НАСТРОЙКИ: WORKER_URL — адрес бесплатного Cloudflare Worker, который шлёт заявку в Telegram (токен хранится в Worker). Если пусто — заявка отправляется через открытие Telegram. YM_ID — номер счётчика Яндекс Метрики. */
@@ -187,16 +113,16 @@ var T=[
 {id:"kleopatra-bavyera",n:"Kleopatra Bavyera",t:"abroad",c:"Турция",dt:"27 ноября – 4 декабря 2026 · 7 ночей",k:"2026-11-27",m:[11],img:"alanya.jpg",b:"Завтрак",p:68569,u:"за 2 взрослых",d:"Аланья · Eco Room без кондиционера · 2-я линия, песок.",src:"https://sletat.ru/hot-tour/saint_petersburg/turkey/"},
 {id:"lola-hotel",n:"The Lola Hotel",t:"abroad",c:"Турция",dt:"20–26 ноября 2026 · 6 ночей",k:"2026-11-20",m:[11],img:"istanbul.jpg",b:"Без питания",p:71225,u:"за 2 взрослых",d:"Стамбул, Фатих · номер Economy Double.",src:"https://sletat.ru/hot-tour/saint_petersburg/turkey/"},
 {id:"may-hotel",n:"May",t:"abroad",c:"Турция",dt:"30 ноября – 4 декабря 2026 · 4 ночи",k:"2026-11-30",m:[11],img:"istanbul.jpg",b:"4 ночи",p:71293,u:"за 2 взрослых",d:"Стамбул · номер Standard · без питания.",src:"https://sletat.ru/hot-tour/saint_petersburg/turkey/"},
-{id:"new-badawia",n:"New Badawia Sharm Resort",t:"abroad",c:"Египет",dt:"29 ноября – 8 декабря 2026 · 9 ночей",k:"2026-11-29",m:[11],img:"sharm.jpg",fb:"egypt.jpg",b:"Всё включено",p:80784,u:"за 2 взрослых",d:"Хадаба · Standard Garden View Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"dahab-plaza",n:"Dahab Plaza Hotel",t:"abroad",c:"Египет",dt:"29 ноября – 7 декабря 2026 · 8 ночей",k:"2026-11-29",m:[11],img:"dahab.jpg",fb:"egypt.jpg",b:"Без питания",p:84223,u:"за 2 взрослых",d:"Дахаб · номер Deluxe Room · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"sharm-hills",n:"Sharm Hills Resort",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"sharm.jpg",fb:"egypt.jpg",b:"Без питания",p:86154,u:"за 2 взрослых",d:"Шарм-эль-Шейх · номер Deluxe Twin Room.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"uni-sharm",n:"Uni Sharm Aqua Park",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"sharm.jpg",fb:"egypt.jpg",b:"Завтрак и ужин",p:86817,u:"за 2 взрослых",d:"Хадаба · Standard Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
-{id:"sand-beach",n:"The Sand Beach",t:"abroad",c:"Таиланд",dt:"21–27 ноября 2026 · 6 ночей",k:"2026-11-21",m:[11],img:"pattaya.jpg",fb:"thailand.jpg",b:"Завтрак · первая линия",p:127756,u:"за 2 взрослых",d:"Пляж Джомтьен · номер Deluxe · 3★.",src:"https://sletat.ru/hot-tour/saint_petersburg/thailand/"},
-{id:"mariek",n:"Мариэк",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"sukhum.jpg",fb:"abhazia.jpg",imgMode:"country",b:"8,9 · 2-я линия",p:28164,u:"за 2 взрослых",d:"Сухум · без питания · 2-местный номер с отдельным входом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
-{id:"arda",n:"Arda",t:"abroad",c:"Абхазия",dt:"28 ноября – 2 декабря 2026 · 4 ночи",k:"2026-11-28",m:[11],img:"gagra.jpg",fb:"abhazia.jpg",imgMode:"country",b:"Завтрак",p:29160,u:"за 2 взрослых",d:"Гагра · стандартный 2-местный номер без балкона · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
-{id:"grace-black-sea",n:"Grace Black Sea",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"sukhum.jpg",fb:"abhazia.jpg",imgMode:"country",b:"Рейтинг 9 · первая линия",p:33222,u:"за 2 взрослых",d:"Сухум · без питания · стандартный номер с балконом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
-{id:"crystal-plaza",n:"Crystal Plaza Hotel",t:"abroad",c:"ОАЭ",dt:"22–28 ноября 2026 · 6 ночей",k:"2026-11-22",m:[11],img:"sharjah.jpg",fb:"dubai.jpg",imgMode:"country",b:"Завтрак",p:85392,u:"за 2 взрослых",d:"Шарджа · номер Standard.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
-{id:"red-castle",n:"Red Castle Hotel",t:"abroad",c:"ОАЭ",dt:"24 ноября – 1 декабря 2026 · 7 ночей",k:"2026-11-24",m:[11],img:"sharjah.jpg",fb:"dubai.jpg",imgMode:"country",b:"4★ · без питания",p:88384,u:"за 2 взрослых",d:"Шарджа · номер Deluxe Suite · 2-я линия, песок.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
+{id:"new-badawia",n:"New Badawia Sharm Resort",t:"abroad",c:"Египет",dt:"29 ноября – 8 декабря 2026 · 9 ночей",k:"2026-11-29",m:[11],img:"egypt.jpg",b:"Всё включено",p:80784,u:"за 2 взрослых",d:"Хадаба · Standard Garden View Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"dahab-plaza",n:"Dahab Plaza Hotel",t:"abroad",c:"Египет",dt:"29 ноября – 7 декабря 2026 · 8 ночей",k:"2026-11-29",m:[11],img:"egypt.jpg",b:"Без питания",p:84223,u:"за 2 взрослых",d:"Дахаб · номер Deluxe Room · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"sharm-hills",n:"Sharm Hills Resort",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"egypt.jpg",b:"Без питания",p:86154,u:"за 2 взрослых",d:"Шарм-эль-Шейх · номер Deluxe Twin Room.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"uni-sharm",n:"Uni Sharm Aqua Park",t:"abroad",c:"Египет",dt:"30 ноября – 7 декабря 2026 · 7 ночей",k:"2026-11-30",m:[11],img:"egypt.jpg",b:"Завтрак и ужин",p:86817,u:"за 2 взрослых",d:"Хадаба · Standard Room · 3-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/egypt/"},
+{id:"sand-beach",n:"The Sand Beach",t:"abroad",c:"Таиланд",dt:"21–27 ноября 2026 · 6 ночей",k:"2026-11-21",m:[11],img:"thailand.jpg",b:"Завтрак · первая линия",p:127756,u:"за 2 взрослых",d:"Пляж Джомтьен · номер Deluxe · 3★.",src:"https://sletat.ru/hot-tour/saint_petersburg/thailand/"},
+{id:"mariek",n:"Мариэк",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"abhazia.jpg",imgMode:"country",b:"8,9 · 2-я линия",p:28164,u:"за 2 взрослых",d:"Сухум · без питания · 2-местный номер с отдельным входом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
+{id:"arda",n:"Arda",t:"abroad",c:"Абхазия",dt:"28 ноября – 2 декабря 2026 · 4 ночи",k:"2026-11-28",m:[11],img:"abhazia.jpg",imgMode:"country",b:"Завтрак",p:29160,u:"за 2 взрослых",d:"Гагра · стандартный 2-местный номер без балкона · 2-я линия.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
+{id:"grace-black-sea",n:"Grace Black Sea",t:"abroad",c:"Абхазия",dt:"25 ноября – 2 декабря 2026 · 7 ночей",k:"2026-11-25",m:[11],img:"abhazia.jpg",imgMode:"country",b:"Рейтинг 9 · первая линия",p:33222,u:"за 2 взрослых",d:"Сухум · без питания · стандартный номер с балконом.",src:"https://sletat.ru/hot-tour/saint_petersburg/abkhazia/"},
+{id:"crystal-plaza",n:"Crystal Plaza Hotel",t:"abroad",c:"ОАЭ",dt:"22–28 ноября 2026 · 6 ночей",k:"2026-11-22",m:[11],img:"dubai.jpg",imgMode:"country",b:"Завтрак",p:85392,u:"за 2 взрослых",d:"Шарджа · номер Standard.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
+{id:"red-castle",n:"Red Castle Hotel",t:"abroad",c:"ОАЭ",dt:"24 ноября – 1 декабря 2026 · 7 ночей",k:"2026-11-24",m:[11],img:"dubai.jpg",imgMode:"country",b:"4★ · без питания",p:88384,u:"за 2 взрослых",d:"Шарджа · номер Deluxe Suite · 2-я линия, песок.",src:"https://sletat.ru/hot-tour/saint_petersburg/uae/"},
 {id:"custom",n:"Индивидуальный подбор",t:"custom",c:"Свой маршрут",dt:"Ваш маршрут · ваши даты",k:"2027-01-01",m:[],img:"custom.jpg",b:"Эксклюзив",p:0,u:"по запросу",d:"Подберём маршрут под ваши даты, бюджет и состав группы: от выходных в области до дальних стран."}];
 var $=function(i){return document.getElementById(i)},type="",E=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
 function imgFb(i){var f=i.dataset.fb;if(f){i.onerror=null;i.src="static/img/"+f}else i.remove()}
@@ -220,11 +146,13 @@ document.addEventListener("click",function(e){var b=e.target.closest("[data-book
 var u=new URLSearchParams(location.search),src=[u.get("utm_source"),u.get("utm_campaign")].filter(Boolean).join("/")||document.referrer||"прямой заход";
 $("bf").onsubmit=function(e){e.preventDefault();if($("hp").value)return;
  var tour=$("bt").value,ph=$("bph").value.replace(/[^\d+]/g,""),key=tour+ph,last=localStorage.getItem("nt_last");
- var msg="Новая заявка Novo Tours\nТур: "+(tour||"—")+"\nВылет: "+$("bc").value+"\nДаты: "+($("bd").value||"—")+"\nТуристов: "+$("bp").value+"\nИмя: "+$("bn").value+"\nТелефон: "+$("bph").value+"\nКомментарий: "+($("bm").value||"—")+"\nИсточник: "+src;
+ var msg="Новая заявка Novo Tours\nТур: "+(tour||"—")+"\nВылет: "+$("bc").value+"\nДаты: "+($("bd").value||"—")+"\nТуристов: "+$("bp").value+"\nПродолжительность: "+($("bdu").value||"—")+"\nБюджет: "+($("bb").value||"—")+"\nИмя: "+$("bn").value+"\nТелефон: "+$("bph").value+"\nКомментарий: "+($("bm").value||"—")+"\nИсточник: "+src;
  function done(t){$("bf").style.display="none";if(t)$("okt").textContent=t;$("ok").style.display="block";goal("lead")}
  if(last&&last.split("|")[0]===key&&Date.now()-last.split("|")[1]<6e5){done("Эту заявку мы уже получили. Свяжемся с вами в ближайшее время.");return}
  try{localStorage.setItem("nt_last",key+"|"+Date.now())}catch(x){}
  if(WORKER_URL){fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:msg})}).then(function(r){if(!r.ok)throw 0;done()}).catch(function(){location.href="https://t.me/"+TG+"?text="+encodeURIComponent(msg);done("Не удалось отправить автоматически. Откройте Telegram и отправьте сообщение — или позвоните: +7 981 882-08-88.")})}
  else{window.open("https://t.me/"+TG+"?text="+encodeURIComponent(msg),"_blank");done("Откроется Telegram с готовым сообщением — нажмите «Отправить». Или позвоните: +7 981 882-08-88.")}};
 render();
-</script></body></html>
+
+</script>
+<script src="/static/js/nova.js" defer></script></body></html>

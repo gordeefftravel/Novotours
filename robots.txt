@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /favorites/
+
+Sitemap: https://novotours.ru/sitemap.xml
